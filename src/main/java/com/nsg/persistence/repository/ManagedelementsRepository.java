@@ -8,5 +8,5 @@ import com.nsg.persistence.domain.Managedelement;
 
 public interface ManagedelementsRepository extends CrudRepository< Managedelement, String>{
 
-	Managedelement findById(String key);
+	Managedelement findById(Long key);
 }
