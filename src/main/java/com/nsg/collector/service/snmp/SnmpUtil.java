@@ -11,6 +11,8 @@ import org.snmp4j.PDU;
 import org.snmp4j.smi.OID;
 import org.snmp4j.smi.VariableBinding;
 
+import com.nsg.core.constant.SmiType;
+
 /**
  * author litongjie
  */
@@ -28,6 +30,8 @@ public interface SnmpUtil {
 
     public  VariableBinding snmpGet(String strOID) throws IOException;
 
+    public VariableBinding snmpGetNext(String string) throws IOException;
+
     public  long snmpGetMaxValue(String strOID) throws IOException;
  
     public List<VariableBinding> snmpGet(List<String> oids) throws IOException;
@@ -37,7 +41,9 @@ public interface SnmpUtil {
 
     public  void close();
     public  String getAddress();
-    public  PDU createPDU();
     public void  setTimeOut(long timeout);
     public void set_retries(int _retries);
+
+	public Object snmpGet(String string, SmiType type)throws IOException;
+
 }
