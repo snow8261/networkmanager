@@ -173,63 +173,44 @@ public class SnmpV2Util implements SnmpUtil {
 
 	private VariableBinding getResult(ResponseEvent response)
 			throws IOException {
-		VariableBinding result = null;
-		if (response != null) {
-			if (response.getResponse() == null) {
-				throw new IOException(
-						"Should not happend!Snmp failed connect to "
-								+ this.getAddress());
-			}
-			if (response.getResponse().getErrorStatus() == PDU.noError) {
-				PDU pduresponse = response.getResponse();
-				result = (VariableBinding) pduresponse.getVariableBindings()
-						.firstElement();
-			} else {
-				throw new IOException("response error is "
-						+ response.getResponse().getErrorStatusText());
-			}
-		} else {
-			System.err.println("Feeling like a TimeOut occured ");
-			throw new IOException("time out! Snmp failed connect to "
-					+ this.getAddress());
+		List<VariableBinding> results=getResults(response);
+		if(results.size()<1){
+			throw new IOException("Snmp failed get value " + this.getAddress());
 		}
-		return result;
+		return results.get(0);
+		
 	}
-
-
 
 	private List<VariableBinding> getResults(ResponseEvent response)
 			throws IOException {
-		List<VariableBinding> result = null;
-		if (response != null) {
-			if (response.getResponse() == null) {
-				throw new IOException("Snmp failed connect to "
-						+ this.getAddress());
-			}
-			if (response.getResponse().getErrorStatus() == PDU.noError) {
-				PDU pduresponse = response.getResponse();
-				result = new ArrayList<VariableBinding>(
-						pduresponse.getVariableBindings());
-			} else {
-				System.err.println("response is "
-						+ response.getResponse().getErrorStatusText());
-				throw new IOException("response error is "
-						+ response.getResponse().getErrorStatusText()
-						+ " address is " + strAddress);
-			}
-		} else {
-			System.err.println("Feeling like a TimeOut occured ");
-			throw new IOException("time out! Snmp failed connect to "
-					+ this.getAddress());
+		PDU pduresponse = response.getResponse();
+		if (pduresponse == null) {
+			throw new IOException("Snmp failed connect to " + this.getAddress());
 		}
+		List<VariableBinding> result = new ArrayList<VariableBinding>();
+
+		int errorStatus = pduresponse.getErrorStatus();
+		if (errorStatus == PDU.noError) {
+			result = new ArrayList<VariableBinding>(
+					pduresponse.getVariableBindings());
+		} else {
+			System.err.println("response is " + errorStatus);
+			throw new IOException("response error is " + errorStatus
+					+ " address is " + strAddress);
+		}
+
 		return result;
 	}
 	
 	private List<VariableBinding> getResults(PDU pdu) throws IOException {
 		
 		ResponseEvent response = snmp.get(pdu, comtarget);
-		List<VariableBinding> result = getResults(response);
-		return result;
+		if(response==null){
+			System.err.println("Feeling like a TimeOut occured ");
+			throw new IOException("time out! Snmp failed connect to "
+					+ this.getAddress());
+		}
+		return getResults(response);
 	}
 
 	@Override
@@ -260,7 +241,6 @@ public class SnmpV2Util implements SnmpUtil {
 		return result;
 	}
 
-	/** {@inheritDoc} */
 	public void close() {
 		if (snmp == null)
 			return;
