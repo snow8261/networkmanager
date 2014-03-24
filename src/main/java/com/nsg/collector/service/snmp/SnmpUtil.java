@@ -16,13 +16,13 @@ import org.snmp4j.smi.VariableBinding;
  */
 public interface SnmpUtil {
 
-    public  boolean isBaseOidHasValue(String baseOidStr);
+    public  boolean isBaseOidHasValue(String baseOidStr); 
 
     public  void init() throws IOException;
 
-    public  int snmpGetInt(String strOID) throws IOException;
+	public int snmpGetInt(String strOID) throws IOException;
 
-    public  long snmpGetLong(String strOID) throws IOException;
+	public long snmpGetLong(String strOID) throws IOException;
 
     public  String snmpGetString(String strOID) throws IOException;
 

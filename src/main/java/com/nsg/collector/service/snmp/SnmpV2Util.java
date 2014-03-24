@@ -23,32 +23,16 @@ import org.snmp4j.util.TableEvent;
 import org.snmp4j.util.TableUtils;
 import org.snmp4j.util.TreeUtils;
 
-/**
- * <p>Title: </p>
- *
- * <p>Description: </p>
- *
- * <p>Copyright: Copyright (c) 2008</p>
- *
- * <p>Company: </p>
- *
- * @author not attributable
- * @version 1.0
- */
 public class SnmpV2Util implements SnmpUtil {
     private String community = "public";
     private String strAddress = "127.0.0.1";
     private int port = 161;
-
     private CommunityTarget comtarget;
     private Snmp snmp;
     private long _timeout = 35000;
     private int _retries = 3;
     private int maxRepetitions = 4;
 
-    public String getAddress() {
-        return strAddress;
-    }
 
 
     public SnmpV2Util(String _strAddress, String _community,int _retries) throws IOException {
@@ -63,7 +47,6 @@ public class SnmpV2Util implements SnmpUtil {
     }
  
 
-	/** {@inheritDoc}*/
 	public boolean isBaseOidHasValue(String baseOidStr)  {
 		PDU pdu = new PDU();
 		OID oid = new OID(baseOidStr);
@@ -80,7 +63,6 @@ public class SnmpV2Util implements SnmpUtil {
 		return false;
 	}
 
-    /** {@inheritDoc}*/
     public void init() throws IOException {
         OctetString osCommunity = new OctetString(this.community);
         String address = strAddress + "/" + port;
@@ -97,7 +79,8 @@ public class SnmpV2Util implements SnmpUtil {
 
     }
 
-    /** {@inheritDoc}*/
+   
+    
     public int snmpGetInt(String strOID) throws IOException {
         VariableBinding vb = snmpGet(strOID);
         if(vb.getVariable().isException()){
@@ -106,7 +89,6 @@ public class SnmpV2Util implements SnmpUtil {
         return vb.getVariable().toInt();
     }
 
-    /** {@inheritDoc}*/
     public long snmpGetLong(String strOID) throws IOException {
         VariableBinding vb = snmpGet(strOID);
         if(vb.getVariable().isException()){// noSuchObject
@@ -125,12 +107,10 @@ public class SnmpV2Util implements SnmpUtil {
     }
 
 
-    /** {@inheritDoc}*/
     public VariableBinding snmpGet(String strOID) throws IOException {
         VariableBinding result = null;
         PDU pdu = createPDU();
         ResponseEvent response;
-
         pdu.add(new VariableBinding(new OID(strOID)));
         pdu.setType(PDU.GET);
 
@@ -183,7 +163,6 @@ public class SnmpV2Util implements SnmpUtil {
 	return result;
     }
 
-    /** {@inheritDoc}*/
     public List snmpGet(Vector<String> strOIDs) throws IOException {
         Vector result = null;
         PDU pdu = createPDU();
@@ -274,4 +253,7 @@ public class SnmpV2Util implements SnmpUtil {
 		this._retries = _retries;
 	}
 
+	public String getAddress() {
+		return strAddress;
+	}
 }
