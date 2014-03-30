@@ -11,6 +11,8 @@ import org.snmp4j.PDU;
 import org.snmp4j.smi.OID;
 import org.snmp4j.smi.VariableBinding;
 
+import com.nsg.collector.service.snmp.mibobject.SnmpObject;
+import com.nsg.collector.service.snmp.mibobject.SystemInfo;
 import com.nsg.core.constant.SmiType;
 
 /**
@@ -35,6 +37,7 @@ public interface SnmpUtil {
     public  long snmpGetMaxValue(String strOID) throws IOException;
  
     public List<VariableBinding> snmpGet(List<String> oids) throws IOException;
+    public void snmpGetValues(List<SnmpObject> snmpobs) throws IOException;
 
     public  List snmpGetTable(OID[] columnOIDs, OID lowerBoundIndex,
 	    OID upperBoundIndex) throws IOException;
@@ -44,6 +47,9 @@ public interface SnmpUtil {
     public void  setTimeOut(long timeout);
     public void set_retries(int _retries);
 
-	public Object snmpGet(String string, SmiType type)throws IOException;
+	public Object snmpGet(String string, SmiType type) throws IOException;
+
+	public <T> T get(Class<T> aclass) throws IOException;
+
 
 }
