@@ -10,6 +10,7 @@ import java.util.List;
 import org.snmp4j.PDU;
 import org.snmp4j.smi.OID;
 import org.snmp4j.smi.VariableBinding;
+import org.snmp4j.util.TableEvent;
 
 import com.nsg.collector.service.snmp.mibobject.SnmpObject;
 import com.nsg.collector.service.snmp.mibobject.SystemInfo;
@@ -39,7 +40,7 @@ public interface SnmpUtil {
     public List<VariableBinding> snmpGet(List<String> oids) throws IOException;
     public void snmpGetValues(List<SnmpObject> snmpobs) throws IOException;
 
-    public  List snmpGetTable(OID[] columnOIDs, OID lowerBoundIndex,
+    public  List<TableEvent> snmpGetTable(OID[] columnOIDs, OID lowerBoundIndex,
 	    OID upperBoundIndex) throws IOException;
 
     public  void close();

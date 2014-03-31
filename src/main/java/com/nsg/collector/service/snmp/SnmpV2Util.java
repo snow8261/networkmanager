@@ -300,9 +300,9 @@ public class SnmpV2Util implements SnmpUtil {
 	}
 
 	@Override
-	public List snmpGetTable(OID[] columnOIDs, OID lowerBoundIndex,
+	public List<TableEvent> snmpGetTable(OID[] columnOIDs, OID lowerBoundIndex,
 			OID upperBoundIndex) throws IOException {
-		List result = null;
+		List<TableEvent> result = null;
 		TableUtils tableUtils = new TableUtils(this.snmp,
 				new DefaultPDUFactory(PDU.GETBULK));
 		tableUtils.setMaxNumRowsPerPDU(maxRepetitions);
