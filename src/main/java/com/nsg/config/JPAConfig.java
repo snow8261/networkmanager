@@ -64,6 +64,7 @@ public class JPAConfig {
 		ds.setURL("jdbc:oracle:thin:@//134.74.25.2:1522/sdh");
 		ds.setUser("bill");
 		ds.setPassword("bill");
+		
 		return ds;
 	}
 	
@@ -72,7 +73,7 @@ public class JPAConfig {
 
 		HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
 		vendorAdapter.setGenerateDdl(true);
-
+		vendorAdapter.setShowSql(true);
 		LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
 		factory.setJpaVendorAdapter(vendorAdapter);
 		factory.setPackagesToScan("com.nsg.persistence.domain");

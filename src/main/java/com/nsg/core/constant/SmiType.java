@@ -1,0 +1,11 @@
+package com.nsg.core.constant;
+
+public enum SmiType {
+	INTEGER, UNSIGNED32, COUNTER32, GAUGE32, TIMETICKS,
+
+	COUNTER64,
+
+	OCTET_STRING, OPAQUE, DISPLAY_STRING, OID,
+
+	IPADDRESS,
+}
