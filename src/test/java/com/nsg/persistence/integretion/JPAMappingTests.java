@@ -26,5 +26,5 @@ public class JPAMappingTests {
 		assertTableExists(manager, "Managedelement");
 		assertTableHasColumn(manager, "Managedelement", "id");
 		assertTableHasColumn(manager, "Managedelement", "name");
-	}
+	}  
 }
