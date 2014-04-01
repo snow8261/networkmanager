@@ -3,16 +3,14 @@ package com.nsg.collector.service.snmp;
 import static org.junit.Assert.assertEquals;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import org.junit.Test;
 import org.snmp4j.smi.OID;
-import org.snmp4j.smi.OctetString;
 import org.snmp4j.smi.VariableBinding;
 import org.snmp4j.util.TableEvent;
 
-import com.nsg.collector.service.snmp.annotation.MibObjectType;
+import com.nsg.collector.service.snmp.mibobject.IfTable;
 import com.nsg.collector.service.snmp.mibobject.SnmpObject;
 import com.nsg.collector.service.snmp.mibobject.SystemInfo;
 import com.nsg.core.constant.SmiType;
@@ -77,27 +75,75 @@ public class SnmpTests {
 		assertEquals(76, vb.intValue());
 	}
 
-	@Test
-	public void _6_test_snmp_list() throws Exception{
+	// @Test
+	// public void _6_test_snmp_list() throws Exception{
+	// SnmpUtil snmpUtil = new SnmpV2Util("127.0.0.1", "public", 1);
+	// OID[] oids=new OID[]{new OID("1.3.6.1.2.1.2.2.1.1"),new
+	// OID("1.3.6.1.2.1.2.2.1.2")};
+	// List list=snmpUtil.snmpGetTable(oids, null, null);
+	// for (int i = 0; i <list.size(); i++) {
+	// TableEvent tb= (TableEvent)list.get(i);
+	// System.out.println("index:"+tb.getIndex());
+	// System.out.println(tb.getColumns()[0].getOid());
+	// System.out.println(tb.getColumns()[0].getVariable().toString());
+	// System.out.println(tb.getColumns()[1].getOid());
+	// System.out.println(new
+	// String(((OctetString)tb.getColumns()[1].getVariable()).getValue()));
+	// }
+	// }
+
+	// @Test
+	public void _8_test_snmp_list() throws Exception {
 		SnmpUtil snmpUtil = new SnmpV2Util("127.0.0.1", "public", 1);
-		OID[] oids=new OID[]{new OID("1.3.6.1.2.1.2.2.1.1"),new OID("1.3.6.1.2.1.2.2.1.2")};
-		List list=snmpUtil.snmpGetTable(oids, null, null);
-		for (int i = 0; i <list.size(); i++) {
-	 		 TableEvent tb= (TableEvent)list.get(i);
-	 		 System.out.println("index:"+tb.getIndex());
-	 		 System.out.println(tb.getColumns()[0].getOid());
-	 		 System.out.println(tb.getColumns()[0].getVariable().toString());
-	 		 System.out.println(tb.getColumns()[1].getOid());
-	 		 System.out.println(new String(((OctetString)tb.getColumns()[1].getVariable()).getValue()));
+		List<OID> oidlist = new ArrayList<OID>();
+		oidlist.add(new OID("1.3.6.1.2.1.2.2.1.1"));
+		oidlist.add(new OID("1.3.6.1.2.1.2.2.1.2"));
+		oidlist.add(new OID("1.3.6.1.2.1.2.2.9.2"));
+		oidlist.add(new OID("1.3.6.1.2.1.31.1.1.1.15"));
+
+		OID[] oids = (OID[]) oidlist.toArray(new OID[oidlist.size()]);
+		List list = snmpUtil.snmpGetTable(oids, null, null);
+		for (int i = 0; i < list.size(); i++) {
+			TableEvent tb = (TableEvent) list.get(i);
+			System.out.println(tb.isError());
+			System.out.println("length:" + tb.getColumns().length);
+			System.out.println("index:" + tb.getIndex());
+			System.out.println(tb.getColumns()[2]);
+			System.out.println(tb.getColumns()[0].isException());
+			System.out.println(tb.getColumns()[0]);
+			System.out.println(tb.getColumns()[1]);
+			System.out.println(tb.getColumns()[3]);
+			// System.out.println(new
+			// String(((OctetString)tb.getColumns()[1].getVariable()).getValue()));
+			// System.out.println(tb.getColumns()[2].isException());
+			// System.out.println(tb.getColumns()[2].getOid());
+			// System.out.println(tb.getColumns()[2].getVariable());
+		}
+	}
+
+	@Test
+	public void _7_test_snmp_list() throws Exception {
+		SnmpUtil snmpUtil = new SnmpV2Util("127.0.0.1", "public", 1);
+		List<IfTable> iftables = snmpUtil.getTable(IfTable.class);
+		for (IfTable ifTable : iftables) {
+			System.out.println(ifTable);
+		}
+
+	}
+
+	@Test
+	public void _9_test_snmp_getTablewithindex() throws Exception {
+		SnmpUtil snmpUtil = new SnmpV2Util("127.0.0.1", "public", 1);
+		List<String> indexes=new ArrayList<String>();
+		indexes.add("50");
+		indexes.add("32");
+		List<IfTable> iftables = snmpUtil.getTable(IfTable.class,indexes);
+		for (IfTable ifTable : iftables) {
+			System.out.println(ifTable);
 		}
 	}
 	
-	@Test
-	public void _7_test_snmp_list() throws Exception{
-		SnmpUtil snmpUtil = new SnmpV2Util("127.0.0.1", "public", 1);
-		
-		
-	}
+	
 	// @Test
 	// public void _2_test_snmp_getNext_local() throws Exception {
 	// SnmpUtil snmpUtil=new SnmpV2Util("127.0.0.1","public",1);
