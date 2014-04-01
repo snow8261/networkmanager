@@ -1,7 +1,5 @@
 package com.nsg.collector.service.snmp.mibobject;
 
-import java.util.Arrays;
-
 import com.nsg.collector.service.snmp.annotation.MibObjectType;
 import com.nsg.core.constant.SmiType;
 
