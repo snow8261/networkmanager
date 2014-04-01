@@ -259,20 +259,21 @@ public class SnmpV2Util implements SnmpUtil {
 	public <T> T get(Class<T> aclass) throws IOException {
 		Field[] fields = aclass.getDeclaredFields();
 		List<OID> oids = new ArrayList<OID>();
-		Map<String, Field> maps = new HashMap<String, Field>();
+		Map<OID, Field> maps = new HashMap<OID, Field>();
 		for (Field field : fields) {
 			boolean flag = field.isAnnotationPresent(MibObjectType.class);
 			if (flag) {
 				MibObjectType mibobjecttype = field
 						.getAnnotation(MibObjectType.class);
-				oids.add(new OID(mibobjecttype.oid()));
-				maps.put(mibobjecttype.oid(), field);
+				OID oid=new OID(mibobjecttype.oid());
+				oids.add(oid);
+				maps.put(oid, field);
 			}
 		}
 		List<VariableBinding> vbs = snmpGet(oids);
 		try {
 			T t = aclass.newInstance();
-			for (String oid : maps.keySet()) {
+			for (OID oid : maps.keySet()) {
 				VariableBinding vb = getVb(vbs, oid);
 				Field field = maps.get(oid);
 				MibObjectType mibobjecttype = field
@@ -411,6 +412,15 @@ public class SnmpV2Util implements SnmpUtil {
 	private VariableBinding getVb(List<VariableBinding> vbs, String oid) {
 		for (VariableBinding vb : vbs) {
 			if (vb.getOid().toString().startsWith(oid)) {
+				return vb;
+			}
+		}
+		return null;
+	}
+	
+	private VariableBinding getVb(List<VariableBinding> vbs, OID oid) {
+		for (VariableBinding vb : vbs) {
+			if (vb.getOid().startsWith(oid)) {
 				return vb;
 			}
 		}
