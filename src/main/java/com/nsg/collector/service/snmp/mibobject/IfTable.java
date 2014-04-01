@@ -1,5 +1,7 @@
 package com.nsg.collector.service.snmp.mibobject;
 
+import java.util.Arrays;
+
 import com.nsg.collector.service.snmp.annotation.MibObjectType;
 import com.nsg.core.constant.SmiType;
 
@@ -16,8 +18,8 @@ public class IfTable {
 	@MibObjectType(oid = "1.3.6.1.2.1.2.2.1.5", type=SmiType.GAUGE32) 
 	private long ifSpeed;
 
-	@MibObjectType(oid = "1.3.6.1.2.1.2.2.1.6", type=SmiType.OCTET_STRING) 
-	private byte[] ifPhysAddress;
+	@MibObjectType(oid = "1.3.6.1.2.1.2.2.1.6", type=SmiType.PHYSADDRESS ) 
+	private String ifPhysAddress;
 
 	@MibObjectType(oid = "1.3.6.1.2.1.2.2.1.7", type=SmiType.INTEGER) 
 	private int ifAdminStatus;
@@ -66,11 +68,11 @@ public class IfTable {
 		this.ifSpeed = ifSpeed;
 	}
 
-	public byte[] getIfPhysAddress() {
+	public String getIfPhysAddress() {
 		return ifPhysAddress;
 	}
 
-	public void setIfPhysAddress(byte[] ifPhysAddress) {
+	public void setIfPhysAddress(String ifPhysAddress) {
 		this.ifPhysAddress = ifPhysAddress;
 	}
 
@@ -114,4 +116,16 @@ public class IfTable {
 		this.ifOutOctets = ifOutOctets;
 	}
 
+	@Override
+	public String toString() {
+		return "IfTable [ifIndex=" + ifIndex + ", ifDescr=" + ifDescr
+				+ ", ifType=" + ifType + ", ifSpeed=" + ifSpeed
+				+ ", ifPhysAddress=" + ifPhysAddress
+				+ ", ifAdminStatus=" + ifAdminStatus + ", ifOperStatus="
+				+ ifOperStatus + ", ifLastChange=" + ifLastChange
+				+ ", ifInOctets=" + ifInOctets + ", ifOutOctets=" + ifOutOctets
+				+ "]";
+	}
+	
+	
 }

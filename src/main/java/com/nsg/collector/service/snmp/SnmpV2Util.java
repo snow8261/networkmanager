@@ -35,6 +35,7 @@ import org.snmp4j.util.TableUtils;
 import org.snmp4j.util.TreeUtils;
 
 import com.nsg.collector.service.snmp.annotation.MibObjectType;
+import com.nsg.collector.service.snmp.mibobject.IfTable;
 import com.nsg.collector.service.snmp.mibobject.SnmpObject;
 import com.nsg.core.constant.SmiType;
 
@@ -108,16 +109,27 @@ public class SnmpV2Util implements SnmpUtil {
 	}
 
 	public VariableBinding snmpGet(String strOID) throws IOException {
+		OID oid=new OID(strOID);
+		return snmpGet(oid);
+	}
+	
+	public VariableBinding snmpGet(OID strOID) throws IOException {
 		PDU pdu = createPDU(strOID);
 		ResponseEvent response = snmp.get(pdu, comtarget);
 		VariableBinding result = getResult(response);
 		return result;
 	}
 
-	private PDU createPDU(String strOID) {
+	private PDU createPDU(OID strOID) {
 		PDU pdu = new PDU();
-		pdu.add(new VariableBinding(new OID(strOID)));
+		pdu.add(new VariableBinding(strOID));
 		return pdu;
+	}
+
+	
+	private PDU createPDU(String strOID) {
+		OID oid=new OID(strOID);
+		return createPDU(oid);
 	}
 
 	public Object snmpGet(String strOID, SmiType type) throws IOException {
@@ -160,31 +172,100 @@ public class SnmpV2Util implements SnmpUtil {
 			return ((Opaque) variable).toString();
 		} else if (type == SmiType.IPADDRESS) {
 			return ((IpAddress) variable).toString();
+		} else if (type == SmiType.PHYSADDRESS) {
+			return variable.toString();
 		} else {
 			throw new RuntimeException("Unknow smiType: " + type);
 		}
 	}
-	
-	public <T> T get(Class<T> aclass) throws IOException{
-		Field[] fields=aclass.getDeclaredFields();
-		List<String> oids=new ArrayList<String>();
-		Map<String,Field> maps=new HashMap<String,Field>();
+
+	@Override
+	public <T> List<T> getTable(Class<T> aclass) throws IOException {
+		Field[] fields = aclass.getDeclaredFields();
+		List<OID> oids = new ArrayList<OID>();
+		Map<String, Field> maps = new HashMap<String, Field>();
 		for (Field field : fields) {
-			boolean flag=field.isAnnotationPresent(MibObjectType.class);
-			if(flag){
-				MibObjectType mibobjecttype=field.getAnnotation(MibObjectType.class);
-				oids.add(mibobjecttype.oid());
+			boolean flag = field.isAnnotationPresent(MibObjectType.class);
+			if (flag) {
+				MibObjectType mibobjecttype = field
+						.getAnnotation(MibObjectType.class);
+				oids.add(new OID(mibobjecttype.oid()));
 				maps.put(mibobjecttype.oid(), field);
 			}
 		}
-		List<VariableBinding> vbs=snmpGet(oids);
-	  	try {
-			T t= aclass.newInstance();
-			for(String oid:maps.keySet()){
-				VariableBinding vb=getVb(vbs,oid);
-				Field field=maps.get(oid);
-				MibObjectType mibobjecttype=field.getAnnotation(MibObjectType.class);
-				Object o=getValue(mibobjecttype.type(),vb);
+		OID[] colums = (OID[]) oids.toArray(new OID[oids.size()]);
+		List<TableEvent> events = snmpGetTable(colums, null, null);
+		List<T> ts = new ArrayList<T>();
+		for (TableEvent tableEvent : events) {
+			try {
+				T t = aclass.newInstance();
+				VariableBinding[] vbs = tableEvent.getColumns();
+				for (int i = 0; i < vbs.length; i++) {
+					if (tableEvent.isError()) {
+						throw new RuntimeException("table get error");
+					}
+					if (vbs[i] == null) {
+						// throw new RuntimeException("vb is null");
+						System.err.println("vb is null at" + i);
+						continue;
+					}
+					VariableBinding vb = vbs[i];
+					OID oid = vb.getOid();
+					for (String keyoid : maps.keySet()) {
+						if (oid.startsWith(new OID(keyoid))) {
+							Field field = maps.get(keyoid);
+							MibObjectType mibobjecttype = field
+									.getAnnotation(MibObjectType.class);
+							Object o = getValue(mibobjecttype.type(), vb);
+							field.setAccessible(true);
+							field.set(t, o);
+						}
+					}
+				}
+				ts.add(t);
+			} catch (InstantiationException e) {
+				e.printStackTrace();
+			} catch (IllegalAccessException e) {
+				e.printStackTrace();
+			}
+
+		}
+		return ts;
+	}
+
+	public <T> List<T> getTable(Class<T> aclass, List<String> indexes)
+			throws IOException {
+		List<T> ts= new ArrayList<T>();
+		for (String index: indexes) {
+			T t=get(aclass,index);
+			ts.add(t);
+		}
+		return ts;
+	}
+
+	@Override
+	public <T> T get(Class<T> aclass) throws IOException {
+		Field[] fields = aclass.getDeclaredFields();
+		List<OID> oids = new ArrayList<OID>();
+		Map<String, Field> maps = new HashMap<String, Field>();
+		for (Field field : fields) {
+			boolean flag = field.isAnnotationPresent(MibObjectType.class);
+			if (flag) {
+				MibObjectType mibobjecttype = field
+						.getAnnotation(MibObjectType.class);
+				oids.add(new OID(mibobjecttype.oid()));
+				maps.put(mibobjecttype.oid(), field);
+			}
+		}
+		List<VariableBinding> vbs = snmpGet(oids);
+		try {
+			T t = aclass.newInstance();
+			for (String oid : maps.keySet()) {
+				VariableBinding vb = getVb(vbs, oid);
+				Field field = maps.get(oid);
+				MibObjectType mibobjecttype = field
+						.getAnnotation(MibObjectType.class);
+				Object o = getValue(mibobjecttype.type(), vb);
 				field.setAccessible(true);
 				field.set(t, o);
 			}
@@ -194,7 +275,43 @@ public class SnmpV2Util implements SnmpUtil {
 		} catch (IllegalAccessException e) {
 			e.printStackTrace();
 		}
-		
+
+		return null;
+	}
+
+	public <T> T get(Class<T> aclass,String index) throws IOException {
+		Field[] fields = aclass.getDeclaredFields();
+		List<OID> oids = new ArrayList<OID>();
+		Map<String, Field> maps = new HashMap<String, Field>();
+		for (Field field : fields) {
+			boolean flag = field.isAnnotationPresent(MibObjectType.class);
+			if (flag) {
+				MibObjectType mibobjecttype = field
+						.getAnnotation(MibObjectType.class);
+				String oidstr=mibobjecttype.oid()+"."+index;
+				oids.add(new OID(oidstr));
+				maps.put(oidstr, field);
+			}
+		}
+		List<VariableBinding> vbs = snmpGet(oids);
+		try {
+			T t = aclass.newInstance();
+			for (String oid : maps.keySet()) {
+				VariableBinding vb = getVb(vbs, oid);
+				Field field = maps.get(oid);
+				MibObjectType mibobjecttype = field
+						.getAnnotation(MibObjectType.class);
+				Object o = getValue(mibobjecttype.type(), vb);
+				field.setAccessible(true);
+				field.set(t, o);
+			}
+			return t;
+		} catch (InstantiationException e) {
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			e.printStackTrace();
+		}
+
 		return null;
 	}
 
@@ -204,37 +321,38 @@ public class SnmpV2Util implements SnmpUtil {
 		VariableBinding result = getResult(response);
 		return result;
 	}
+
+
 	@Override
-	public List<VariableBinding> snmpGet(List<String> oids) throws IOException {
+	public List<VariableBinding> snmpGet(List<OID> oids) throws IOException {
 		PDU pdu = new PDU();
-		for (String strOID : oids) {
-			pdu.add(new VariableBinding(new OID(strOID)));
+		for (OID strOID : oids) {
+			pdu.add(new VariableBinding(strOID));
 			pdu.setType(PDU.GET);
 		}
 		List<VariableBinding> result = getResults(pdu);
 		return result;
 	}
-	
 	@Override
-	public void snmpGetValues(List<SnmpObject> snmpobs) throws IOException{
-		List<String> oids=new ArrayList<String>();
+	public void snmpGetValues(List<SnmpObject> snmpobs) throws IOException {
+		List<OID> oids = new ArrayList<OID>();
 		for (SnmpObject snmpObject : snmpobs) {
-			oids.add(snmpObject.getOid());
+			oids.add(new OID(snmpObject.getOid()));
 		}
-		List<VariableBinding> vbs=snmpGet(oids);
+		List<VariableBinding> vbs = snmpGet(oids);
 		for (SnmpObject snmpObject : snmpobs) {
-			String oid=snmpObject.getOid();
-			VariableBinding vb=getVb(vbs, oid);
-			if(vb!=null){
-			  Object object=getValue(snmpObject.getType(), vb);
-			  snmpObject.setValue(object);
+			String oid = snmpObject.getOid();
+			VariableBinding vb = getVb(vbs, oid);
+			if (vb != null) {
+				Object object = getValue(snmpObject.getType(), vb);
+				snmpObject.setValue(object);
 			}
 		}
 	}
 
 	private VariableBinding getVb(List<VariableBinding> vbs, String oid) {
-		for(VariableBinding vb :vbs){
-			if(vb.getOid().toString().startsWith(oid)){
+		for (VariableBinding vb : vbs) {
+			if (vb.getOid().toString().startsWith(oid)) {
 				return vb;
 			}
 		}
@@ -243,12 +361,12 @@ public class SnmpV2Util implements SnmpUtil {
 
 	private VariableBinding getResult(ResponseEvent response)
 			throws IOException {
-		List<VariableBinding> results=getResults(response);
-		if(results.size()<1){
+		List<VariableBinding> results = getResults(response);
+		if (results.size() < 1) {
 			throw new IOException("Snmp failed get value " + this.getAddress());
 		}
 		return results.get(0);
-		
+
 	}
 
 	private List<VariableBinding> getResults(ResponseEvent response)
@@ -271,11 +389,11 @@ public class SnmpV2Util implements SnmpUtil {
 
 		return result;
 	}
-	
+
 	private List<VariableBinding> getResults(PDU pdu) throws IOException {
-		
+
 		ResponseEvent response = snmp.get(pdu, comtarget);
-		if(response==null){
+		if (response == null) {
 			System.err.println("Feeling like a TimeOut occured ");
 			throw new IOException("time out! Snmp failed connect to "
 					+ this.getAddress());
@@ -302,7 +420,7 @@ public class SnmpV2Util implements SnmpUtil {
 	@Override
 	public List<TableEvent> snmpGetTable(OID[] columnOIDs, OID lowerBoundIndex,
 			OID upperBoundIndex) throws IOException {
-		List<TableEvent> result = null;
+		List<TableEvent> result = new ArrayList<TableEvent>();
 		TableUtils tableUtils = new TableUtils(this.snmp,
 				new DefaultPDUFactory(PDU.GETBULK));
 		tableUtils.setMaxNumRowsPerPDU(maxRepetitions);
