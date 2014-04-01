@@ -42,24 +42,32 @@ public interface SnmpUtil {
 
 	public void snmpGetValues(List<SnmpObject> snmpobs) throws IOException;
 
+	public void close();
+	
+	public String getAddress();
+	
+	public void setTimeOut(long timeout);
+	
+	public void set_retries(int _retries);
+	
+	public Object snmpGet(String string, SmiType type) throws IOException;
+	
 	public List<TableEvent> snmpGetTable(OID[] columnOIDs, OID lowerBoundIndex,
 			OID upperBoundIndex) throws IOException;
 
-	public <T> List<T> getTable(Class<T> aClass) throws IOException;
 
+	
+	public <T> T get(Class<T> aclass) throws IOException;
+	
+	public <T> T get(Class<T> aclass,String index) throws IOException;
+	
+	public <T> T get(Class<T> aclass,String index,String[] fields) throws IOException;
+	
 	public <T> List<T> getTable(Class<T> class1, List<String> indexes)
 			throws IOException;
 
-	public void close();
+	public <T> List<T> getTable(Class<T> class1, List<String> indexes,
+			String[] fields)throws IOException;
 
-	public String getAddress();
-
-	public void setTimeOut(long timeout);
-
-	public void set_retries(int _retries);
-
-	public Object snmpGet(String string, SmiType type) throws IOException;
-
-	public <T> T get(Class<T> aclass) throws IOException;
-
+	public <T> List<T> getTable(Class<T> aClass) throws IOException; 
 }

@@ -233,11 +233,23 @@ public class SnmpV2Util implements SnmpUtil {
 		return ts;
 	}
 
+	@Override
 	public <T> List<T> getTable(Class<T> aclass, List<String> indexes)
 			throws IOException {
 		List<T> ts= new ArrayList<T>();
 		for (String index: indexes) {
 			T t=get(aclass,index);
+			ts.add(t);
+		}
+		return ts;
+	}
+
+	@Override
+	public  <T> List<T> getTable(Class<T> aclass, List<String> indexes,
+			String[] fields)throws IOException{
+		List<T> ts= new ArrayList<T>();
+		for (String index: indexes) {
+			T t=get(aclass,index,fields);
 			ts.add(t);
 		}
 		return ts;
@@ -315,6 +327,52 @@ public class SnmpV2Util implements SnmpUtil {
 		return null;
 	}
 
+	@Override
+	public <T> T get(Class<T> aclass,String index,String[] strfields) throws IOException{
+		List<Field> fields=new ArrayList<Field>();
+		for (String fieldname : strfields) {
+			try {
+				Field f =  aclass.getDeclaredField(fieldname);
+				fields.add(f);
+			} catch (NoSuchFieldException e) {
+				e.printStackTrace();
+			} catch (SecurityException e) {
+				e.printStackTrace();
+			}
+		}
+		List<OID> oids = new ArrayList<OID>();
+		Map<String, Field> maps = new HashMap<String, Field>();
+		for (Field field : fields) {
+			boolean flag = field.isAnnotationPresent(MibObjectType.class);
+			if (flag) {
+				MibObjectType mibobjecttype = field
+						.getAnnotation(MibObjectType.class);
+				String oidstr=mibobjecttype.oid()+"."+index;
+				oids.add(new OID(oidstr));
+				maps.put(oidstr, field);
+			}
+		}
+		List<VariableBinding> vbs = snmpGet(oids);
+		try {
+			T t = aclass.newInstance();
+			for (String oid : maps.keySet()) {
+				VariableBinding vb = getVb(vbs, oid);
+				Field field = maps.get(oid);
+				MibObjectType mibobjecttype = field
+						.getAnnotation(MibObjectType.class);
+				Object o = getValue(mibobjecttype.type(), vb);
+				field.setAccessible(true);
+				field.set(t, o);
+			}
+			return t;
+		} catch (InstantiationException e) {
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			e.printStackTrace();
+		}
+
+		return null;
+	}
 	public VariableBinding snmpGetNext(String strOID) throws IOException {
 		PDU pdu = createPDU(strOID);
 		ResponseEvent response = snmp.getNext(pdu, comtarget);
