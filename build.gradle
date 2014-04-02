@@ -22,10 +22,11 @@ jar {
 repositories {
     mavenCentral()
     maven { url "http://repo.spring.io/libs-snapshot" } 
+  
 }
 
 dependencies{
-    compile files('lib/ojdbc14.jar')
+    compile fileTree('lib')
     runtime 'org.springframework:spring-core:3.2.3.RELEASE'
     runtime 'com.h2database:h2:1.3.173'
     compile 'joda-time:joda-time:2.2'
