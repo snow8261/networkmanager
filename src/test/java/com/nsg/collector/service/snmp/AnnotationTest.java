@@ -3,13 +3,11 @@ package com.nsg.collector.service.snmp;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
 
-import org.junit.Test;
-
 import com.nsg.collector.service.snmp.annotation.MibObjectType;
 import com.nsg.collector.service.snmp.mibobject.SystemInfo;
 
 public class AnnotationTest {
-	@Test
+	//@Test
 	public void testAnnotation() {
 		// AnnotationHelper helper=new AnnotationHelper();
 		// helper.get(SystemInfo.class);
@@ -28,7 +26,7 @@ public class AnnotationTest {
 
 	}
 	
-	@Test
+	//@Test
 	public <T> void testSetvalue() throws InstantiationException, IllegalAccessException{
 		Class aclass = SystemInfo.class;
 	    T t=(T) aclass.newInstance();

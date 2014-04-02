@@ -1,5 +1,8 @@
 package com.nsg.persistence.integretion;
 
+import static com.nsg.persistence.domain.helper.JPAAssertions.assertTableExists;
+import static com.nsg.persistence.domain.helper.JPAAssertions.assertTableHasColumn;
+
 import javax.persistence.EntityManager;
 
 import org.junit.Test;
@@ -11,7 +14,6 @@ import org.springframework.test.context.transaction.TransactionConfiguration;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.nsg.config.JPAConfig;
-import static com.nsg.persistence.domain.helper.JPAAssertions.*;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = { JPAConfig.class })

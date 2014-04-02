@@ -1,0 +1,657 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<testsuite name="com.nsg.persistence.integretion.JPAMappingTests" tests="1" failures="0" errors="0" timestamp="2014-04-02T08:13:01" hostname="peter-PC" time="106.34">
+  <properties/>
+  <testcase name="thatItemCustomMappingWorks" classname="com.nsg.persistence.integretion.JPAMappingTests" time="106.34"/>
+  <system-out><![CDATA[16:13:01.220 [Test worker] DEBUG o.s.t.c.j.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class com.nsg.persistence.integretion.JPAMappingTests].
+16:13:01.253 [Test worker] DEBUG o.s.t.c.s.AbstractDelegatingSmartContextLoader - Delegating to AnnotationConfigContextLoader to process context configuration [ContextConfigurationAttributes@51701bdc declaringClass = 'com.nsg.persistence.integretion.JPAMappingTests', locations = '{}', classes = '{class com.nsg.config.JPAConfig}', inheritLocations = true, initializers = '{}', inheritInitializers = true, name = [null], contextLoaderClass = 'org.springframework.test.context.ContextLoader'].
+16:13:01.254 [Test worker] DEBUG o.s.test.context.ContextLoaderUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.nsg.persistence.integretion.JPAMappingTests]
+16:13:01.255 [Test worker] DEBUG o.s.test.context.TestContextManager - @TestExecutionListeners is not present for class [class com.nsg.persistence.integretion.JPAMappingTests]: using defaults.
+16:13:01.309 [Test worker] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.nsg.persistence.integretion.JPAMappingTests]
+16:13:01.309 [Test worker] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.nsg.persistence.integretion.JPAMappingTests]
+16:13:01.310 [Test worker] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.nsg.persistence.integretion.JPAMappingTests]
+16:13:01.310 [Test worker] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.nsg.persistence.integretion.JPAMappingTests]
+16:13:01.310 [Test worker] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.nsg.persistence.integretion.JPAMappingTests]
+16:13:01.310 [Test worker] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.nsg.persistence.integretion.JPAMappingTests]
+16:13:01.312 [Test worker] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.nsg.persistence.integretion.JPAMappingTests]
+16:13:01.312 [Test worker] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.nsg.persistence.integretion.JPAMappingTests]
+16:13:01.313 [Test worker] DEBUG o.s.t.c.s.AbstractDelegatingSmartContextLoader - Delegating to AnnotationConfigContextLoader to load context from [MergedContextConfiguration@6bdc64a5 testClass = JPAMappingTests, locations = '{}', classes = '{class com.nsg.config.JPAConfig}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]].
+16:13:01.313 [Test worker] DEBUG o.s.t.c.s.AbstractGenericContextLoader - Loading ApplicationContext for merged context configuration [[MergedContextConfiguration@6bdc64a5 testClass = JPAMappingTests, locations = '{}', classes = '{class com.nsg.config.JPAConfig}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+16:13:01.391 [Test worker] DEBUG o.s.core.env.StandardEnvironment - Initializing new StandardEnvironment
+16:13:01.392 [Test worker] DEBUG o.s.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+16:13:01.395 [Test worker] DEBUG o.s.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+16:13:01.395 [Test worker] DEBUG o.s.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+16:13:01.395 [Test worker] DEBUG o.s.t.c.s.AnnotationConfigContextLoader - Registering annotated classes: {class com.nsg.config.JPAConfig}
+16:13:01.469 [Test worker] INFO  o.s.c.s.GenericApplicationContext - Refreshing org.springframework.context.support.GenericApplicationContext@307b4703: startup date [Wed Apr 02 16:13:01 CST 2014]; root of context hierarchy
+16:13:01.469 [Test worker] DEBUG o.s.c.s.GenericApplicationContext - Bean factory for org.springframework.context.support.GenericApplicationContext@307b4703: org.springframework.beans.factory.support.DefaultListableBeanFactory@60c0c8b5: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,JPAConfig]; root of factory hierarchy
+16:13:01.481 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+16:13:01.481 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+16:13:01.494 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor' to allow for resolving potential circular references
+16:13:01.496 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+16:13:01.545 [Test worker] DEBUG o.s.c.a.ConfigurationClassBeanDefinitionReader - Registered bean definition for imported @Configuration class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration
+16:13:01.546 [Test worker] DEBUG o.s.c.a.ConfigurationClassBeanDefinitionReader - Registering bean definition for @Bean method org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration.org.springframework.transaction.config.internalTransactionAdvisor()
+16:13:01.546 [Test worker] DEBUG o.s.c.a.ConfigurationClassBeanDefinitionReader - Registering bean definition for @Bean method org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration.transactionAttributeSource()
+16:13:01.546 [Test worker] DEBUG o.s.c.a.ConfigurationClassBeanDefinitionReader - Registering bean definition for @Bean method org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration.transactionInterceptor()
+16:13:01.547 [Test worker] DEBUG o.s.c.a.ConfigurationClassBeanDefinitionReader - Registering bean definition for @Bean method com.nsg.config.JPAConfig.dataSourceOracle()
+16:13:01.548 [Test worker] DEBUG o.s.c.a.ConfigurationClassBeanDefinitionReader - Registering bean definition for @Bean method com.nsg.config.JPAConfig.entityManagerFactory()
+16:13:01.549 [Test worker] DEBUG o.s.c.a.ConfigurationClassBeanDefinitionReader - Registering bean definition for @Bean method com.nsg.config.JPAConfig.entityManager()
+16:13:01.550 [Test worker] DEBUG o.s.c.a.ConfigurationClassBeanDefinitionReader - Registering bean definition for @Bean method com.nsg.config.JPAConfig.transactionManager()
+16:13:01.551 [Test worker] DEBUG o.s.c.a.ConfigurationClassBeanDefinitionReader - Registering bean definition for @Bean method com.nsg.config.JPAConfig.hibernateExceptionTranslator()
+16:13:01.559 [Test worker] DEBUG o.s.core.env.StandardEnvironment - Initializing new StandardEnvironment
+16:13:01.559 [Test worker] DEBUG o.s.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+16:13:01.559 [Test worker] DEBUG o.s.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+16:13:01.559 [Test worker] DEBUG o.s.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+16:13:01.564 [Test worker] DEBUG o.s.c.i.s.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [F:\java\projects\spring\networkmanager\build\classes\main\com\nsg\persistence\repository]
+16:13:01.565 [Test worker] DEBUG o.s.c.i.s.PathMatchingResourcePatternResolver - Searching directory [F:\java\projects\spring\networkmanager\build\classes\main\com\nsg\persistence\repository] for files matching pattern [F:/java/projects/spring/networkmanager/build/classes/main/com/nsg/persistence/repository/**/*.class]
+16:13:01.567 [Test worker] DEBUG o.s.c.i.s.PathMatchingResourcePatternResolver - Resolved location pattern [classpath*:com/nsg/persistence/repository/**/*.class] to resources [file [F:\java\projects\spring\networkmanager\build\classes\main\com\nsg\persistence\repository\ManagedelementsRepository.class]]
+16:13:01.569 [Test worker] DEBUG o.s.d.r.c.RepositoryComponentProvider - Identified candidate component class: file [F:\java\projects\spring\networkmanager\build\classes\main\com\nsg\persistence\repository\ManagedelementsRepository.class]
+16:13:01.574 [Test worker] DEBUG o.s.core.env.StandardEnvironment - Initializing new StandardEnvironment
+16:13:01.574 [Test worker] DEBUG o.s.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+16:13:01.574 [Test worker] DEBUG o.s.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+16:13:01.574 [Test worker] DEBUG o.s.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+16:13:01.576 [Test worker] DEBUG o.s.c.i.s.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [F:\java\projects\spring\networkmanager\build\classes\main\com\nsg\persistence\repository]
+16:13:01.576 [Test worker] DEBUG o.s.c.i.s.PathMatchingResourcePatternResolver - Searching directory [F:\java\projects\spring\networkmanager\build\classes\main\com\nsg\persistence\repository] for files matching pattern [F:/java/projects/spring/networkmanager/build/classes/main/com/nsg/persistence/repository/**/*.class]
+16:13:01.576 [Test worker] DEBUG o.s.c.i.s.PathMatchingResourcePatternResolver - Resolved location pattern [classpath*:com/nsg/persistence/repository/**/*.class] to resources [file [F:\java\projects\spring\networkmanager\build\classes\main\com\nsg\persistence\repository\ManagedelementsRepository.class]]
+16:13:01.642 [Test worker] DEBUG o.s.c.a.ConfigurationClassEnhancer - Successfully enhanced com.nsg.config.JPAConfig; enhanced class name is: com.nsg.config.JPAConfig$$EnhancerByCGLIB$$39c60667
+16:13:01.642 [Test worker] DEBUG o.s.c.a.ConfigurationClassPostProcessor - Replacing bean definition 'JPAConfig' existing class name 'com.nsg.config.JPAConfig' with enhanced class name 'com.nsg.config.JPAConfig$$EnhancerByCGLIB$$39c60667'
+16:13:01.647 [Test worker] DEBUG o.s.c.a.ConfigurationClassEnhancer - Successfully enhanced org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration; enhanced class name is: org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerByCGLIB$$9ed00558
+16:13:01.647 [Test worker] DEBUG o.s.c.a.ConfigurationClassPostProcessor - Replacing bean definition 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' existing class name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' with enhanced class name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerByCGLIB$$9ed00558'
+16:13:01.662 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+16:13:01.662 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+16:13:01.663 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor' to allow for resolving potential circular references
+16:13:01.663 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+16:13:01.663 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+16:13:01.663 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+16:13:01.665 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor' to allow for resolving potential circular references
+16:13:01.665 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+16:13:01.665 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+16:13:01.665 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+16:13:01.669 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor' to allow for resolving potential circular references
+16:13:01.669 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+16:13:01.669 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalPersistenceAnnotationProcessor'
+16:13:01.669 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.context.annotation.internalPersistenceAnnotationProcessor'
+16:13:01.670 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.context.annotation.internalPersistenceAnnotationProcessor' to allow for resolving potential circular references
+16:13:01.670 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.context.annotation.internalPersistenceAnnotationProcessor'
+16:13:01.670 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+16:13:01.670 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+16:13:01.670 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor' to allow for resolving potential circular references
+16:13:01.670 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+16:13:01.670 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor'
+16:13:01.670 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor'
+16:13:01.671 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor' to allow for resolving potential circular references
+16:13:01.671 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor'
+16:13:01.671 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.data.repository.core.support.RepositoryInterfaceAwareBeanPostProcessor#0'
+16:13:01.671 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.data.repository.core.support.RepositoryInterfaceAwareBeanPostProcessor#0'
+16:13:01.671 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.data.repository.core.support.RepositoryInterfaceAwareBeanPostProcessor#0' to allow for resolving potential circular references
+16:13:01.671 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.data.repository.core.support.RepositoryInterfaceAwareBeanPostProcessor#0'
+16:13:01.672 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor#0'
+16:13:01.672 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor#0'
+16:13:01.676 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor#0' to allow for resolving potential circular references
+16:13:01.697 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'hibernateExceptionTranslator'
+16:13:01.697 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'hibernateExceptionTranslator'
+16:13:01.698 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'JPAConfig'
+16:13:01.698 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'JPAConfig'
+16:13:01.701 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'JPAConfig' to allow for resolving potential circular references
+16:13:01.703 [Test worker] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'JPAConfig' of type [class com.nsg.config.JPAConfig$$EnhancerByCGLIB$$39c60667] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+16:13:01.703 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'JPAConfig'
+16:13:01.725 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'hibernateExceptionTranslator' to allow for resolving potential circular references
+16:13:01.727 [Test worker] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'hibernateExceptionTranslator' of type [class org.springframework.orm.hibernate4.HibernateExceptionTranslator] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+16:13:01.727 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'hibernateExceptionTranslator'
+16:13:01.730 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor#0'
+16:13:01.731 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.aop.config.internalAutoProxyCreator'
+16:13:01.731 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.aop.config.internalAutoProxyCreator'
+16:13:01.738 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.aop.config.internalAutoProxyCreator' to allow for resolving potential circular references
+16:13:01.747 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.aop.config.internalAutoProxyCreator'
+16:13:01.749 [Test worker] DEBUG o.s.c.s.GenericApplicationContext - Unable to locate MessageSource with name 'messageSource': using default [org.springframework.context.support.DelegatingMessageSource@63ff5c98]
+16:13:01.751 [Test worker] DEBUG o.s.c.s.GenericApplicationContext - Unable to locate ApplicationEventMulticaster with name 'applicationEventMulticaster': using default [org.springframework.context.event.SimpleApplicationEventMulticaster@460ab1b4]
+16:13:01.756 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@60c0c8b5: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,JPAConfig,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor,org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration,org.springframework.transaction.config.internalTransactionAdvisor,transactionAttributeSource,transactionInterceptor,dataSourceOracle,entityManagerFactory,entityManager,transactionManager,hibernateExceptionTranslator,org.springframework.data.repository.core.support.RepositoryInterfaceAwareBeanPostProcessor#0,org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor#0,managedelementsRepository,org.springframework.aop.config.internalAutoProxyCreator]; root of factory hierarchy
+16:13:01.756 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+16:13:01.756 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+16:13:01.757 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+16:13:01.757 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+16:13:01.757 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalPersistenceAnnotationProcessor'
+16:13:01.757 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'JPAConfig'
+16:13:01.757 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+16:13:01.757 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor'
+16:13:01.757 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration'
+16:13:01.757 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration'
+16:13:01.764 [Test worker] DEBUG o.s.b.f.annotation.InjectionMetadata - Registered injected element on class [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerByCGLIB$$9ed00558]: AutowiredMethodElement for void org.springframework.transaction.annotation.AbstractTransactionManagementConfiguration.setConfigurers(java.util.Collection)
+16:13:01.764 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' to allow for resolving potential circular references
+16:13:01.766 [Test worker] DEBUG o.s.b.f.annotation.InjectionMetadata - Processing injected method of bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': AutowiredMethodElement for void org.springframework.transaction.annotation.AbstractTransactionManagementConfiguration.setConfigurers(java.util.Collection)
+16:13:01.769 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importRegistry'
+16:13:01.770 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+16:13:01.770 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+16:13:01.770 [Test worker] DEBUG o.s.a.f.a.BeanFactoryAdvisorRetrievalHelper - Skipping currently created advisor 'org.springframework.transaction.config.internalTransactionAdvisor'
+16:13:01.772 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning eagerly cached instance of singleton bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' that is not fully initialized yet - a consequence of a circular reference
+16:13:01.780 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'transactionAttributeSource'
+16:13:01.780 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'transactionAttributeSource'
+16:13:01.780 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning eagerly cached instance of singleton bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' that is not fully initialized yet - a consequence of a circular reference
+16:13:01.782 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'transactionAttributeSource' to allow for resolving potential circular references
+16:13:01.784 [Test worker] DEBUG o.s.a.f.a.BeanFactoryAdvisorRetrievalHelper - Skipping currently created advisor 'org.springframework.transaction.config.internalTransactionAdvisor'
+16:13:01.786 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'transactionAttributeSource'
+16:13:01.786 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'transactionInterceptor'
+16:13:01.786 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'transactionInterceptor'
+16:13:01.787 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning eagerly cached instance of singleton bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' that is not fully initialized yet - a consequence of a circular reference
+16:13:01.790 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'transactionAttributeSource'
+16:13:01.796 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'transactionInterceptor' to allow for resolving potential circular references
+16:13:01.799 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'transactionInterceptor'
+16:13:01.799 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'transactionInterceptor'
+16:13:01.800 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.transaction.config.internalTransactionAdvisor' to allow for resolving potential circular references
+16:13:01.804 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+16:13:01.806 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration'
+16:13:01.806 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+16:13:01.806 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'transactionAttributeSource'
+16:13:01.806 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'transactionInterceptor'
+16:13:01.806 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'dataSourceOracle'
+16:13:01.807 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'dataSourceOracle'
+16:13:01.807 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'JPAConfig'
+16:13:01.891 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'dataSourceOracle' to allow for resolving potential circular references
+16:13:01.895 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+16:13:01.897 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'dataSourceOracle'
+16:13:01.897 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'entityManagerFactory'
+16:13:01.897 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'entityManagerFactory'
+16:13:01.897 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'JPAConfig'
+16:13:01.916 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'dataSourceOracle'
+16:13:01.921 [Test worker] DEBUG o.s.c.i.s.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [F:\java\projects\spring\networkmanager\build\classes\test\com\nsg\persistence\domain]
+16:13:01.921 [Test worker] DEBUG o.s.c.i.s.PathMatchingResourcePatternResolver - Searching directory [F:\java\projects\spring\networkmanager\build\classes\test\com\nsg\persistence\domain] for files matching pattern [F:/java/projects/spring/networkmanager/build/classes/test/com/nsg/persistence/domain/**/*.class]
+16:13:01.921 [Test worker] DEBUG o.s.c.i.s.PathMatchingResourcePatternResolver - Searching directory [F:\java\projects\spring\networkmanager\build\classes\test\com\nsg\persistence\domain\mock] for files matching pattern [F:/java/projects/spring/networkmanager/build/classes/test/com/nsg/persistence/domain/**/*.class]
+16:13:01.922 [Test worker] DEBUG o.s.c.i.s.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [F:\java\projects\spring\networkmanager\build\classes\main\com\nsg\persistence\domain]
+16:13:01.922 [Test worker] DEBUG o.s.c.i.s.PathMatchingResourcePatternResolver - Searching directory [F:\java\projects\spring\networkmanager\build\classes\main\com\nsg\persistence\domain] for files matching pattern [F:/java/projects/spring/networkmanager/build/classes/main/com/nsg/persistence/domain/**/*.class]
+16:13:01.922 [Test worker] DEBUG o.s.c.i.s.PathMatchingResourcePatternResolver - Searching directory [F:\java\projects\spring\networkmanager\build\classes\main\com\nsg\persistence\domain\helper] for files matching pattern [F:/java/projects/spring/networkmanager/build/classes/main/com/nsg/persistence/domain/**/*.class]
+16:13:01.923 [Test worker] DEBUG o.s.c.i.s.PathMatchingResourcePatternResolver - Resolved location pattern [classpath*:com/nsg/persistence/domain/**/*.class] to resources [file [F:\java\projects\spring\networkmanager\build\classes\test\com\nsg\persistence\domain\mock\ManagedelementMock.class], file [F:\java\projects\spring\networkmanager\build\classes\main\com\nsg\persistence\domain\helper\JPAAssertions$1.class], file [F:\java\projects\spring\networkmanager\build\classes\main\com\nsg\persistence\domain\helper\JPAAssertions$2.class], file [F:\java\projects\spring\networkmanager\build\classes\main\com\nsg\persistence\domain\helper\JPAAssertions$ResultCollector.class], file [F:\java\projects\spring\networkmanager\build\classes\main\com\nsg\persistence\domain\helper\JPAAssertions.class], file [F:\java\projects\spring\networkmanager\build\classes\main\com\nsg\persistence\domain\Managedelement.class]]
+16:13:01.930 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+16:13:01.952 [Test worker] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider
+16:13:01.987 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@7fb2380e
+16:13:01.987 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@7fb2380e
+16:13:01.987 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@7fb2380e
+16:13:01.988 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@53465ca2
+16:13:01.990 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration true_false -> org.hibernate.type.TrueFalseType@1a83e35b
+16:13:01.990 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration yes_no -> org.hibernate.type.YesNoType@193a83cc
+16:13:01.993 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@c4a3158
+16:13:01.993 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@c4a3158
+16:13:01.993 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@c4a3158
+16:13:01.994 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration character -> org.hibernate.type.CharacterType@133c3b45
+16:13:01.995 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration char -> org.hibernate.type.CharacterType@133c3b45
+16:13:01.995 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@133c3b45
+16:13:01.997 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@1bb25a82
+16:13:01.997 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@1bb25a82
+16:13:01.998 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@1bb25a82
+16:13:02.000 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration integer -> org.hibernate.type.IntegerType@7593c366
+16:13:02.000 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration int -> org.hibernate.type.IntegerType@7593c366
+16:13:02.001 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@7593c366
+16:13:02.003 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@4a4de3fe
+16:13:02.003 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@4a4de3fe
+16:13:02.003 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Long -> org.hibernate.type.LongType@4a4de3fe
+16:13:02.005 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@648730b8
+16:13:02.005 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@648730b8
+16:13:02.006 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@648730b8
+16:13:02.008 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@31bca1c3
+16:13:02.008 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@31bca1c3
+16:13:02.008 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@31bca1c3
+16:13:02.011 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@12e4d0cd
+16:13:02.011 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@12e4d0cd
+16:13:02.012 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@11a4ea4f
+16:13:02.012 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@11a4ea4f
+16:13:02.013 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration string -> org.hibernate.type.StringType@642726b2
+16:13:02.013 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.String -> org.hibernate.type.StringType@642726b2
+16:13:02.014 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration url -> org.hibernate.type.UrlType@315863e4
+16:13:02.015 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.net.URL -> org.hibernate.type.UrlType@315863e4
+16:13:02.016 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration date -> org.hibernate.type.DateType@5dd41318
+16:13:02.017 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Date -> org.hibernate.type.DateType@5dd41318
+16:13:02.018 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration time -> org.hibernate.type.TimeType@14d55de
+16:13:02.018 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@14d55de
+16:13:02.020 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration timestamp -> org.hibernate.type.TimestampType@4f09dcbb
+16:13:02.020 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@4f09dcbb
+16:13:02.021 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@4f09dcbb
+16:13:02.023 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@2a4bd173
+16:13:02.024 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration calendar -> org.hibernate.type.CalendarType@218c6982
+16:13:02.024 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@218c6982
+16:13:02.024 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@218c6982
+16:13:02.025 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@3c2c7ac5
+16:13:02.026 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration locale -> org.hibernate.type.LocaleType@347b21ea
+16:13:02.026 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@347b21ea
+16:13:02.028 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration currency -> org.hibernate.type.CurrencyType@66869470
+16:13:02.028 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@66869470
+16:13:02.029 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration timezone -> org.hibernate.type.TimeZoneType@6177060f
+16:13:02.029 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@6177060f
+16:13:02.030 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration class -> org.hibernate.type.ClassType@68b57af1
+16:13:02.030 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@68b57af1
+16:13:02.032 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@469e0c2d
+16:13:02.032 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@469e0c2d
+16:13:02.032 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@516f3619
+16:13:02.033 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration pg-uuid -> org.hibernate.type.PostgresUUIDType@655e3dc4
+16:13:02.034 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration binary -> org.hibernate.type.BinaryType@6b033450
+16:13:02.034 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration byte[] -> org.hibernate.type.BinaryType@6b033450
+16:13:02.034 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration [B -> org.hibernate.type.BinaryType@6b033450
+16:13:02.035 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@76a8a314
+16:13:02.035 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@76a8a314
+16:13:02.035 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@76a8a314
+16:13:02.036 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration image -> org.hibernate.type.ImageType@6b11ae04
+16:13:02.037 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration characters -> org.hibernate.type.CharArrayType@3b34c0a6
+16:13:02.037 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration char[] -> org.hibernate.type.CharArrayType@3b34c0a6
+16:13:02.037 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration [C -> org.hibernate.type.CharArrayType@3b34c0a6
+16:13:02.038 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@40d38976
+16:13:02.038 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@40d38976
+16:13:02.038 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@40d38976
+16:13:02.039 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration text -> org.hibernate.type.TextType@847a8f3
+16:13:02.042 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration blob -> org.hibernate.type.BlobType@22489c42
+16:13:02.043 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@22489c42
+16:13:02.043 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@1bd97d0d
+16:13:02.046 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration clob -> org.hibernate.type.ClobType@1a6cffbb
+16:13:02.046 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@1a6cffbb
+16:13:02.046 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@335ad36d
+16:13:02.047 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration serializable -> org.hibernate.type.SerializableType@62cc9d70
+16:13:02.050 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration object -> org.hibernate.type.ObjectType@3219ee8a
+16:13:02.050 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@3219ee8a
+16:13:02.050 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@7e92997e
+16:13:02.050 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@1ec3362f
+16:13:02.050 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@2eb80f1c
+16:13:02.051 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@163fc47c
+16:13:02.051 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@318c69a9
+16:13:02.051 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@5eea3cdf
+16:13:02.051 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@64428527
+16:13:02.051 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@40944dbd
+16:13:02.067 [Test worker] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+16:13:02.072 [Test worker] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.0.1.Final}
+16:13:02.073 [Test worker] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+16:13:02.074 [Test worker] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+16:13:02.083 [Test worker] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
+16:13:02.084 [Test worker] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
+16:13:02.084 [Test worker] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
+16:13:02.085 [Test worker] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
+16:13:02.086 [Test worker] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [hilo] -> [org.hibernate.id.TableHiLoGenerator]
+16:13:02.086 [Test worker] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
+16:13:02.087 [Test worker] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
+16:13:02.087 [Test worker] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
+16:13:02.088 [Test worker] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.SequenceGenerator]
+16:13:02.088 [Test worker] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [seqhilo] -> [org.hibernate.id.SequenceHiLoGenerator]
+16:13:02.089 [Test worker] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
+16:13:02.090 [Test worker] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
+16:13:02.090 [Test worker] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [sequence-identity] -> [org.hibernate.id.SequenceIdentityGenerator]
+16:13:02.091 [Test worker] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+16:13:02.092 [Test worker] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
+16:13:02.094 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@7fb2380e
+16:13:02.094 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@7fb2380e
+16:13:02.094 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@7fb2380e
+16:13:02.094 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@53465ca2
+16:13:02.094 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration true_false -> org.hibernate.type.TrueFalseType@1a83e35b
+16:13:02.094 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration yes_no -> org.hibernate.type.YesNoType@193a83cc
+16:13:02.094 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@c4a3158
+16:13:02.095 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@c4a3158
+16:13:02.095 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@c4a3158
+16:13:02.095 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration character -> org.hibernate.type.CharacterType@133c3b45
+16:13:02.095 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration char -> org.hibernate.type.CharacterType@133c3b45
+16:13:02.095 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@133c3b45
+16:13:02.095 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@1bb25a82
+16:13:02.095 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@1bb25a82
+16:13:02.096 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@1bb25a82
+16:13:02.096 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration integer -> org.hibernate.type.IntegerType@7593c366
+16:13:02.096 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration int -> org.hibernate.type.IntegerType@7593c366
+16:13:02.096 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@7593c366
+16:13:02.096 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@4a4de3fe
+16:13:02.096 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@4a4de3fe
+16:13:02.096 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Long -> org.hibernate.type.LongType@4a4de3fe
+16:13:02.096 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@648730b8
+16:13:02.097 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@648730b8
+16:13:02.097 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@648730b8
+16:13:02.097 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@31bca1c3
+16:13:02.097 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@31bca1c3
+16:13:02.097 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@31bca1c3
+16:13:02.097 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@12e4d0cd
+16:13:02.097 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@12e4d0cd
+16:13:02.097 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@11a4ea4f
+16:13:02.097 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@11a4ea4f
+16:13:02.097 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration string -> org.hibernate.type.StringType@642726b2
+16:13:02.098 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.String -> org.hibernate.type.StringType@642726b2
+16:13:02.098 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration url -> org.hibernate.type.UrlType@315863e4
+16:13:02.098 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.net.URL -> org.hibernate.type.UrlType@315863e4
+16:13:02.098 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration date -> org.hibernate.type.DateType@5dd41318
+16:13:02.098 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Date -> org.hibernate.type.DateType@5dd41318
+16:13:02.098 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration time -> org.hibernate.type.TimeType@14d55de
+16:13:02.098 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@14d55de
+16:13:02.098 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration timestamp -> org.hibernate.type.TimestampType@4f09dcbb
+16:13:02.098 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@4f09dcbb
+16:13:02.099 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@4f09dcbb
+16:13:02.099 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@2a4bd173
+16:13:02.099 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration calendar -> org.hibernate.type.CalendarType@218c6982
+16:13:02.099 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@218c6982
+16:13:02.099 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@218c6982
+16:13:02.099 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@3c2c7ac5
+16:13:02.099 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration locale -> org.hibernate.type.LocaleType@347b21ea
+16:13:02.099 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@347b21ea
+16:13:02.100 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration currency -> org.hibernate.type.CurrencyType@66869470
+16:13:02.100 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@66869470
+16:13:02.100 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration timezone -> org.hibernate.type.TimeZoneType@6177060f
+16:13:02.100 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@6177060f
+16:13:02.100 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration class -> org.hibernate.type.ClassType@68b57af1
+16:13:02.100 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@68b57af1
+16:13:02.100 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@469e0c2d
+16:13:02.100 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@469e0c2d
+16:13:02.100 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@516f3619
+16:13:02.100 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration pg-uuid -> org.hibernate.type.PostgresUUIDType@655e3dc4
+16:13:02.101 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration binary -> org.hibernate.type.BinaryType@6b033450
+16:13:02.101 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration byte[] -> org.hibernate.type.BinaryType@6b033450
+16:13:02.101 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration [B -> org.hibernate.type.BinaryType@6b033450
+16:13:02.101 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@76a8a314
+16:13:02.101 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@76a8a314
+16:13:02.101 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@76a8a314
+16:13:02.101 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration image -> org.hibernate.type.ImageType@6b11ae04
+16:13:02.101 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration characters -> org.hibernate.type.CharArrayType@3b34c0a6
+16:13:02.101 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration char[] -> org.hibernate.type.CharArrayType@3b34c0a6
+16:13:02.102 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration [C -> org.hibernate.type.CharArrayType@3b34c0a6
+16:13:02.102 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@40d38976
+16:13:02.102 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@40d38976
+16:13:02.102 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@40d38976
+16:13:02.102 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration text -> org.hibernate.type.TextType@847a8f3
+16:13:02.102 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration blob -> org.hibernate.type.BlobType@22489c42
+16:13:02.102 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@22489c42
+16:13:02.103 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@1bd97d0d
+16:13:02.103 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration clob -> org.hibernate.type.ClobType@1a6cffbb
+16:13:02.103 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@1a6cffbb
+16:13:02.103 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@335ad36d
+16:13:02.103 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration serializable -> org.hibernate.type.SerializableType@62cc9d70
+16:13:02.103 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration object -> org.hibernate.type.ObjectType@3219ee8a
+16:13:02.103 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@3219ee8a
+16:13:02.104 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@2beb717e
+16:13:02.104 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@6434d75f
+16:13:02.104 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@64e4776b
+16:13:02.104 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@1e01d652
+16:13:02.104 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@2c164804
+16:13:02.104 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@2e1474fc
+16:13:02.104 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@72cc5002
+16:13:02.105 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@5d1d20d3
+16:13:02.105 [Test worker] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
+16:13:02.105 [Test worker] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
+16:13:02.105 [Test worker] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
+16:13:02.105 [Test worker] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
+16:13:02.105 [Test worker] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [hilo] -> [org.hibernate.id.TableHiLoGenerator]
+16:13:02.105 [Test worker] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
+16:13:02.106 [Test worker] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
+16:13:02.106 [Test worker] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
+16:13:02.106 [Test worker] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.SequenceGenerator]
+16:13:02.106 [Test worker] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [seqhilo] -> [org.hibernate.id.SequenceHiLoGenerator]
+16:13:02.106 [Test worker] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
+16:13:02.106 [Test worker] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
+16:13:02.106 [Test worker] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [sequence-identity] -> [org.hibernate.id.SequenceIdentityGenerator]
+16:13:02.107 [Test worker] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+16:13:02.107 [Test worker] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
+16:13:02.109 [Test worker] DEBUG org.hibernate.ejb.Ejb3Configuration - Processing PersistenceUnitInfo [
+	name: default
+	persistence provider classname: null
+	classloader: sun.misc.Launcher$AppClassLoader@7ea2dfe
+	Temporary classloader: org.springframework.instrument.classloading.SimpleThrowawayClassLoader@6063f5af
+	excludeUnlistedClasses: true
+	JTA datasource: null
+	Non JTA datasource: oracle.jdbc.pool.OracleDataSource@4296e599
+	Transaction type: RESOURCE_LOCAL
+	PU root URL: file:/F:/java/projects/spring/networkmanager/build/classes/test/
+	Shared Cache Mode: UNSPECIFIED
+	Validation Mode: AUTO
+	Jar files URLs []
+	Managed classes names [
+		com.nsg.persistence.domain.Managedelement]
+	Mapping files names []
+	Properties []
+16:13:02.111 [Test worker] DEBUG org.hibernate.ejb.Ejb3Configuration - Detect class: true; detect hbm: true
+16:13:02.119 [Test worker] DEBUG o.h.ejb.packaging.AbstractJarVisitor - Searching mapped entities in jar/par: file:/F:/java/projects/spring/networkmanager/build/classes/test/
+16:13:02.120 [Test worker] DEBUG o.h.ejb.packaging.AbstractJarVisitor - Filtering: com.nsg.collector.service.snmp.AnnotationTest
+16:13:02.140 [Test worker] DEBUG o.h.ejb.packaging.AbstractJarVisitor - Filtering: com.nsg.collector.service.snmp.SnmpTests
+16:13:02.142 [Test worker] DEBUG o.h.ejb.packaging.AbstractJarVisitor - Filtering: com.nsg.persistence.domain.mock.ManagedelementMock
+16:13:02.143 [Test worker] DEBUG o.h.ejb.packaging.AbstractJarVisitor - Filtering: com.nsg.persistence.integretion.JPAMappingTests
+16:13:02.151 [Test worker] DEBUG o.h.ejb.packaging.AbstractJarVisitor - Filtering: com.nsg.persistence.integretion.ManagedelementRepositoryTests
+16:13:02.166 [Test worker] DEBUG o.h.i.internal.IntegratorServiceImpl - Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+16:13:02.166 [Test worker] DEBUG o.h.i.internal.IntegratorServiceImpl - Adding Integrator [org.hibernate.ejb.event.JpaIntegrator].
+16:13:02.182 [Test worker] DEBUG org.hibernate.ejb.util.NamingHelper - No JNDI name configured for binding Ejb3Configuration
+16:13:02.187 [Test worker] DEBUG org.hibernate.cfg.Configuration - Preparing to build session factory with filters : {}
+16:13:02.204 [Test worker] DEBUG org.hibernate.cfg.Configuration - Processing hbm.xml files
+16:13:02.204 [Test worker] DEBUG org.hibernate.cfg.Configuration - Process annotated classes
+16:13:02.206 [Test worker] DEBUG org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: com.nsg.persistence.domain.Managedelement
+16:13:02.223 [Test worker] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+16:13:02.229 [Test worker] DEBUG o.h.cfg.annotations.EntityBinder - Import with entity name Managedelement
+16:13:02.231 [Test worker] DEBUG o.h.cfg.annotations.EntityBinder - Bind entity com.nsg.persistence.domain.Managedelement on table Managedelement
+16:13:02.249 [Test worker] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(bill.Managedelement), mappingColumn=ID, insertable=true, updatable=true, unique=false}
+16:13:02.252 [Test worker] DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property id with lazy=false
+16:13:02.254 [Test worker] DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for id
+16:13:02.256 [Test worker] DEBUG o.h.cfg.annotations.PropertyBinder - Building property id
+16:13:02.258 [Test worker] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(bill.Managedelement), mappingColumn=createTime, insertable=true, updatable=true, unique=false}
+16:13:02.258 [Test worker] DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property createTime with lazy=false
+16:13:02.258 [Test worker] DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for createTime
+16:13:02.259 [Test worker] DEBUG o.h.cfg.annotations.PropertyBinder - Building property createTime
+16:13:02.259 [Test worker] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(bill.Managedelement), mappingColumn=name, insertable=true, updatable=true, unique=false}
+16:13:02.259 [Test worker] DEBUG o.h.cfg.annotations.PropertyBinder - MetadataSourceProcessor property name with lazy=false
+16:13:02.259 [Test worker] DEBUG o.h.c.annotations.SimpleValueBinder - building SimpleValue for name
+16:13:02.259 [Test worker] DEBUG o.h.cfg.annotations.PropertyBinder - Building property name
+16:13:02.261 [Test worker] DEBUG o.h.c.annotations.SimpleValueBinder - Setting SimpleValue typeName for id
+16:13:02.261 [Test worker] DEBUG o.h.c.annotations.SimpleValueBinder - Setting SimpleValue typeName for createTime
+16:13:02.261 [Test worker] DEBUG o.h.c.annotations.SimpleValueBinder - Setting SimpleValue typeName for name
+16:13:02.262 [Test worker] DEBUG org.hibernate.cfg.Configuration - Processing fk mappings (*ToOne and JoinedSubclass)
+16:13:02.263 [Test worker] DEBUG org.hibernate.cfg.Configuration - Processing extends queue
+16:13:02.263 [Test worker] DEBUG org.hibernate.cfg.Configuration - Processing extends queue
+16:13:02.263 [Test worker] DEBUG org.hibernate.cfg.Configuration - Processing collection mappings
+16:13:02.263 [Test worker] DEBUG org.hibernate.cfg.Configuration - Processing native query and ResultSetMapping mappings
+16:13:02.263 [Test worker] DEBUG org.hibernate.cfg.Configuration - Processing association property references
+16:13:02.263 [Test worker] DEBUG org.hibernate.cfg.Configuration - Processing foreign key constraints
+16:13:02.271 [Test worker] INFO  o.h.s.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+16:13:03.609 [Test worker] DEBUG o.h.e.jdbc.internal.JdbcServicesImpl - Database ->
+       name : Oracle
+    version : Oracle Database 10g Enterprise Edition Release 10.2.0.3.0 - 64bit Production
+With the Partitioning, OLAP and Data Mining options
+      major : 10
+      minor : 2
+16:13:03.610 [Test worker] DEBUG o.h.e.jdbc.internal.JdbcServicesImpl - Driver ->
+       name : Oracle JDBC driver
+    version : 11.2.0.3.0
+      major : 11
+      minor : 2
+16:13:03.611 [Test worker] DEBUG o.h.e.jdbc.internal.JdbcServicesImpl - JDBC version : 11.2
+16:13:03.884 [Test worker] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+16:13:03.965 [Test worker] DEBUG org.hibernate.cfg.SettingsFactory - Automatic flush during beforeCompletion(): disabled
+16:13:03.966 [Test worker] DEBUG org.hibernate.cfg.SettingsFactory - Automatic session close at end of transaction: disabled
+16:13:03.966 [Test worker] DEBUG org.hibernate.cfg.SettingsFactory - JDBC batch size: 15
+16:13:03.966 [Test worker] DEBUG org.hibernate.cfg.SettingsFactory - JDBC batch updates for versioned data: disabled
+16:13:03.966 [Test worker] DEBUG org.hibernate.cfg.SettingsFactory - Scrollable result sets: enabled
+16:13:03.966 [Test worker] DEBUG org.hibernate.cfg.SettingsFactory - Wrap result sets: disabled
+16:13:03.966 [Test worker] DEBUG org.hibernate.cfg.SettingsFactory - JDBC3 getGeneratedKeys(): disabled
+16:13:03.966 [Test worker] DEBUG org.hibernate.cfg.SettingsFactory - Connection release mode: auto
+16:13:03.966 [Test worker] INFO  o.h.e.t.i.TransactionFactoryInitiator - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+16:13:03.968 [Test worker] DEBUG org.hibernate.cfg.SettingsFactory - Default batch fetch size: 1
+16:13:03.968 [Test worker] DEBUG org.hibernate.cfg.SettingsFactory - Generate SQL with comments: disabled
+16:13:03.968 [Test worker] DEBUG org.hibernate.cfg.SettingsFactory - Order SQL updates by primary key: disabled
+16:13:03.968 [Test worker] DEBUG org.hibernate.cfg.SettingsFactory - Order SQL inserts for batching: disabled
+16:13:03.969 [Test worker] DEBUG org.hibernate.cfg.SettingsFactory - Query translator: org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory
+16:13:03.970 [Test worker] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+16:13:03.970 [Test worker] DEBUG org.hibernate.cfg.SettingsFactory - Query language substitutions: {}
+16:13:03.970 [Test worker] DEBUG org.hibernate.cfg.SettingsFactory - JPA-QL strict compliance: enabled
+16:13:03.970 [Test worker] DEBUG org.hibernate.cfg.SettingsFactory - Second-level cache: enabled
+16:13:03.971 [Test worker] DEBUG org.hibernate.cfg.SettingsFactory - Query cache: disabled
+16:13:03.971 [Test worker] DEBUG org.hibernate.cfg.SettingsFactory - Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
+16:13:03.971 [Test worker] DEBUG org.hibernate.cfg.SettingsFactory - org.hibernate.cache.internal.NoCachingRegionFactory did not provide constructor accepting java.util.Properties; attempting no-arg constructor.
+16:13:03.971 [Test worker] DEBUG org.hibernate.cfg.SettingsFactory - Optimize cache for minimal puts: disabled
+16:13:03.972 [Test worker] DEBUG org.hibernate.cfg.SettingsFactory - Structured second-level cache entries: disabled
+16:13:03.972 [Test worker] DEBUG org.hibernate.cfg.SettingsFactory - Statistics: disabled
+16:13:03.972 [Test worker] DEBUG org.hibernate.cfg.SettingsFactory - Deleted entity synthetic identifier rollback: disabled
+16:13:03.972 [Test worker] DEBUG org.hibernate.cfg.SettingsFactory - Default entity-mode: pojo
+16:13:03.972 [Test worker] DEBUG org.hibernate.cfg.SettingsFactory - Named query checking : enabled
+16:13:03.972 [Test worker] DEBUG org.hibernate.cfg.SettingsFactory - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+16:13:03.972 [Test worker] DEBUG org.hibernate.cfg.SettingsFactory - multi-tenancy strategy : NONE
+16:13:03.980 [Test worker] DEBUG o.h.internal.SessionFactoryImpl - Building session factory
+16:13:03.985 [Test worker] DEBUG o.h.internal.SessionFactoryImpl - Session factory constructed with filter configurations : {}
+16:13:03.985 [Test worker] DEBUG o.h.internal.SessionFactoryImpl - Instantiating session factory with properties: {java.runtime.name=Java(TM) SE Runtime Environment, sun.boot.library.path=F:\java\sdk\jdk1.6.0_17\jre\bin, java.vm.version=14.3-b01, java.vm.vendor=Sun Microsystems Inc., java.vendor.url=http://java.sun.com/, path.separator=;, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, file.encoding.pkg=sun.io, user.country=CN, sun.java.launcher=SUN_STANDARD, sun.os.patch.level=Service Pack 1, java.vm.specification.name=Java Virtual Machine Specification, user.dir=F:\java\projects\spring\networkmanager, javax.persistence.sharedCache.mode=UNSPECIFIED, java.runtime.version=1.6.0_17-b04, hibernate.ejb.discard_pc_on_close=false, java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment, java.endorsed.dirs=F:\java\sdk\jdk1.6.0_17\jre\lib\endorsed, os.arch=amd64, hibernate.connection.autocommit=true, java.io.tmpdir=C:\Users\peter\AppData\Local\Temp\, line.separator=
+, java.vm.specification.vendor=Sun Microsystems Inc., user.variant=, os.name=Windows 7, sun.jnu.encoding=GBK, java.library.path=F:\java\sdk\jdk1.6.0_17\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;F:\gemfire\client\Pivotal_GemFire_NativeClient_64bit_7020\bin;C:\Users\peter\algs4\java\bin;f:\RailsInstaller\Git\cmd;f:\RailsInstaller\Ruby1.9.3\bin;C:\Program Files (x86)\Common Files\NetSarang;F:\python\Python27\;F:\python\Python27\Scripts;F:\python\python32\;F:\python\python32\Scripts;f:\app\peter\product\11.2.0\client_1\bin;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live;c:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files (x86)\Common Files\Roxio Shared\DLLShared\;C:\Program Files (x86)\Common Files\Roxio Shared\OEM\DLLShared\;C:\Program Files (x86)\Common Files\Roxio Shared\OEM\DLLShared\;C:\Program Files (x86)\Common Files\Roxio Shared\OEM\12.0\DLLShared\;C:\Program Files (x86)\Roxio\OEM\AudioCore\;C:\Program Files\TortoiseSVN\bin;C:\Users\peter\Desktop\quickstart;C:\Program Files (x86)\Bitvise Tunnelier;C:\Program Files (x86)\Git\cmd;C:\Program Files\TortoiseHg\;C:\Program Files\SlikSvn\bin;C:\Program Files (x86)\Sublime Text 2;C:\Program Files\nodejs\;F:\scala\sbt\;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;F:\archive\vagrant\bin;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files (x86)\Calibre2\;C:\Program Files (x86)\MiKTeX 2.9\miktex\bin\;C:\Users\peter\algs4\bin;C:\Users\peter\AppData\Roaming\Python\Scripts;F:\java\sdk\jdk1.6.0_17\bin;F:\java\sdk\jdk1.6.0_17\jre\bin;F:\apache\apache-ant-1.8.3-bin\bin;F:\apache\apache-maven-3.0.5\bin;C:\Go\bin;F:\gaeforpython\;C:\Users\peter\AppData\Roaming\npm\;F:\nodejs;F:\archive\putty;F:\archive\wget;F:\mongodb\mongodb2.4.7\bin;C:\Program Files (x86)\CVSNT\;F:\groovy\gradle-1.10\bin;f:\texlive\2013\bin\win32;C:\Users\peter\AppData\Local\Pandoc\;C:\Program Files (x86)\Nmap, hibernate.connection.datasource=oracle.jdbc.pool.OracleDataSource@4296e599, java.specification.name=Java Platform API Specification, java.class.version=50.0, sun.management.compiler=HotSpot 64-Bit Server Compiler, hibernate.transaction.factory_class=org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory, os.version=6.1, user.home=C:\Users\peter, user.timezone=Asia/Shanghai, java.awt.printerjob=sun.awt.windows.WPrinterJob, hibernate.connection.release_mode=auto, java.specification.version=1.6, file.encoding=GBK, java.class.path=F:\java\projects\spring\networkmanager\build\classes\test;F:\java\projects\spring\networkmanager\build\resources\test;F:\java\projects\spring\networkmanager\build\classes\main;F:\java\projects\spring\networkmanager\build\resources\main;F:\java\projects\spring\networkmanager\lib\ojdbc6.jar;F:\java\projects\spring\networkmanager\lib\snmp4j\snmp4j-2.2.3.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\joda-time\joda-time\2.2\a5f29a7acaddea3f4af307e8cf2d0cc82645fd7d\joda-time-2.2.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\org.springframework.data\spring-data-jpa\1.3.4.RELEASE\a0e46521691c6de2a703c09991ee609625cb5b6e\spring-data-jpa-1.3.4.RELEASE.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\1.0.1.Final\3306a165afa81938fc3d8a0948e891de9f6b192b\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\org.hibernate\hibernate-entitymanager\4.0.1.Final\c582284b9faaa35f92462181541c5f2d4ca9eb38\hibernate-entitymanager-4.0.1.Final.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\com.h2database\h2\1.3.173\3d9cc700d2c6b0b7a9bb59bd2b850e6518b6c209\h2-1.3.173.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\junit\junit\4.11\4e031bb61df09069aeb2bffb4019e7a5034a4ee0\junit-4.11.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-web\1.0.0.RC3\6e98a93a85d9342491942c671daa4ecd42b56005\spring-boot-starter-web-1.0.0.RC3.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-jetty\1.0.0.RC3\3b4f2fdc03fc1c281bd9c12cc6f96a5823e6d3d3\spring-boot-starter-jetty-1.0.0.RC3.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-actuator\1.0.0.RC3\e3d0963e7a55689bc1440582c03fa131dd194bc2\spring-boot-starter-actuator-1.0.0.RC3.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\org.springframework\spring-test\3.2.3.RELEASE\b431cc81467f229346d23ea6d3f7a17558b1e368\spring-test-3.2.3.RELEASE.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\org.springframework.data\spring-data-commons\1.5.2.RELEASE\a5e254fdfdbac0511e03ab4281525ecde1fefdee\spring-data-commons-1.5.2.RELEASE.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\org.springframework\spring-orm\3.1.4.RELEASE\bd00cdb59403954d75bf5d4bbf4c5d62d884d38e\spring-orm-3.1.4.RELEASE.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\org.springframework\spring-tx\3.1.4.RELEASE\e7cd40e53940e26f24f5500a084b45f57fabaa01\spring-tx-3.1.4.RELEASE.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\org.aspectj\aspectjrt\1.7.2\2704a4284193598dd42f1dd4ff1ea3e757c875e9\aspectjrt-1.7.2.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\org.jboss.spec.javax.transaction\jboss-transaction-api_1.1_spec\1.0.0.Final\2ab6236535e085d86f37fd97ddfdd35c88c1a419\jboss-transaction-api_1.1_spec-1.0.0.Final.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\dom4j\dom4j\1.6.1\5d3ccc056b6f056dbf0dddfdf43894b9065a8f94\dom4j-1.6.1.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\org.hibernate\hibernate-core\4.0.1.Final\9e1b7e06d8148394632bcaeb7a5f68748c69dce4\hibernate-core-4.0.1.Final.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\org.jboss.logging\jboss-logging\3.1.0.CR2\28725380c07f917ace4e511db21cc45e9ae5a72b\jboss-logging-3.1.0.CR2.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\org.javassist\javassist\3.15.0-GA\79907309ca4bb4e5e51d4086cc4179b2611358d7\javassist-3.15.0-GA.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\org.hibernate.common\hibernate-commons-annotations\4.0.1.Final\78bcf608d997d0529be2f4f781fdc89e801c9e88\hibernate-commons-annotations-4.0.1.Final.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\org.hamcrest\hamcrest-core\1.3\42a25dc3219429f0e5d060061f71acb49bf010a0\hamcrest-core-1.3.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter\1.0.0.RC3\ff4ad85a9a3c7ed014bd1e938c8901b30eb814b6\spring-boot-starter-1.0.0.RC3.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-databind\2.3.1\c4096a8323bbbcbeda072e3def123a9b66783361\jackson-databind-2.3.1.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\org.springframework\spring-web\4.0.1.RELEASE\2ace92025f042e1d3ddfdbba093172e3572ac130\spring-web-4.0.1.RELEASE.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\org.springframework\spring-webmvc\4.0.1.RELEASE\2dbc91a6413115f7ffbe94f0fa9bc9fda3281d90\spring-webmvc-4.0.1.RELEASE.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\org.eclipse.jetty\jetty-webapp\8.1.14.v20131031\1f29371c74381ac42f961e9b984a7af28cc62093\jetty-webapp-8.1.14.v20131031.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\org.eclipse.jetty\jetty-jsp\8.1.14.v20131031\87dc1723a32113d74be2420d940f6825e3b6af42\jetty-jsp-8.1.14.v20131031.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-actuator\1.0.0.RC3\109f3414b370aba404f9f2f9c313d9f8092b0843\spring-boot-actuator-1.0.0.RC3.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\org.springframework\spring-jdbc\3.1.4.RELEASE\7ab81f57d0e1a7ea8206cc936a89bd0629c7fd8\spring-jdbc-3.1.4.RELEASE.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\aopalliance\aopalliance\1.0\235ba8b489512805ac13a8f9ea77a1ca5ebe3e8\aopalliance-1.0.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\xml-apis\xml-apis\1.0.b2\3136ca936f64c9d68529f048c2618bd356bf85c9\xml-apis-1.0.b2.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\commons-collections\commons-collections\3.2.1\761ea405b9b37ced573d2df0d1e3a4e0f9edc668\commons-collections-3.2.1.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\antlr\antlr\2.7.7\83cd2cd674a217ade95a4bb83a8a14f351f48bd0\antlr-2.7.7.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot\1.0.0.RC3\9ad7bf2c89941f11e828610eb86eba21ee04ba6d\spring-boot-1.0.0.RC3.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-autoconfigure\1.0.0.RC3\bd2fd589b1d30d743d3fca5853f1a26f6729228e\spring-boot-autoconfigure-1.0.0.RC3.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-logging\1.0.0.RC3\8f512f7320f62593529dcdedc586fe32a4167b17\spring-boot-starter-logging-1.0.0.RC3.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-annotations\2.3.0\f5e853a20b60758922453d56f9ae1e64af5cb3da\jackson-annotations-2.3.0.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-core\2.3.1\f9f7185c92ca5fefe2fb3efdeb477a67c96ea2d0\jackson-core-2.3.1.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\org.eclipse.jetty\jetty-xml\8.1.14.v20131031\8732c74817fef6d2e3e667636e6c4f27fb4cada9\jetty-xml-8.1.14.v20131031.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\org.eclipse.jetty\jetty-servlet\8.1.14.v20131031\2ea127b7001965201d28ce715f5754573205c4ae\jetty-servlet-8.1.14.v20131031.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\org.eclipse.jetty.orbit\javax.servlet.jsp\2.2.0.v201112011158\80b4ffe7c26ee97313bea2ddda5835fd38812ee4\javax.servlet.jsp-2.2.0.v201112011158.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\org.eclipse.jetty.orbit\org.apache.jasper.glassfish\2.2.2.v201112011158\3945afe6a042228a92da320aec3fa1bc1308183b\org.apache.jasper.glassfish-2.2.2.v201112011158.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\org.eclipse.jetty.orbit\javax.servlet.jsp.jstl\1.2.0.v201105211821\db594f1c8fc00d536f6d135bd7f8a9a99a6b8eea\javax.servlet.jsp.jstl-1.2.0.v201105211821.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\org.eclipse.jetty.orbit\org.apache.taglibs.standard.glassfish\1.2.0.v201112081803\2c4baa72af1d3aae3a1e029d4f8ca07498dabbe0\org.apache.taglibs.standard.glassfish-1.2.0.v201112081803.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\org.eclipse.jetty.orbit\javax.el\2.2.0.v201108011116\ec8944c11833d84b0283a5afbad0fafb264f86a9\javax.el-2.2.0.v201108011116.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\org.eclipse.jetty.orbit\com.sun.el\2.2.0.v201108011116\15f7774c3fa514835a371f47c152317704ea411a\com.sun.el-2.2.0.v201108011116.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\org.eclipse.jetty.orbit\org.eclipse.jdt.core\3.7.1\5b79bfee0852ca685e33cab74496fa3400271b5b\org.eclipse.jdt.core-3.7.1.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\org.slf4j\jul-to-slf4j\1.7.5\d2b0f76abde33a62f1dbc19a9da726ffe9a0180e\jul-to-slf4j-1.7.5.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\org.slf4j\log4j-over-slf4j\1.7.5\bf39ccad53c1f695f32d610ce7f0e5bf9895b262\log4j-over-slf4j-1.7.5.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\ch.qos.logback\logback-classic\1.1.0\fd33d94909eceba84aefb2385d1e0d43bde77564\logback-classic-1.1.0.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\org.eclipse.jetty\jetty-util\8.1.14.v20131031\43063284480a41eca024dc8852452eedf6379c16\jetty-util-8.1.14.v20131031.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\org.eclipse.jetty\jetty-security\8.1.14.v20131031\d6fd7add8e6015a95558b67b43edf7752a925884\jetty-security-8.1.14.v20131031.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\org.eclipse.jetty.orbit\javax.servlet\3.0.0.v201112011016\aaaa85845fb5c59da00193f06b8e5278d8bf3f8\javax.servlet-3.0.0.v201112011016.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\ch.qos.logback\logback-core\1.1.0\70a6307f7f1c0cc0bbbc56950ec5e3cbf1af39a4\logback-core-1.1.0.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\org.eclipse.jetty\jetty-server\8.1.14.v20131031\7f7f9b929b9d9169dd68f36327c819ab9a03a661\jetty-server-8.1.14.v20131031.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\org.eclipse.jetty\jetty-continuation\8.1.14.v20131031\e3396abd21360191c2277e848eff489b58bba45d\jetty-continuation-8.1.14.v20131031.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\org.eclipse.jetty\jetty-http\8.1.14.v20131031\8dd4e01b374e16cf0335b7975a7aa0a57396d5da\jetty-http-8.1.14.v20131031.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\org.eclipse.jetty\jetty-io\8.1.14.v20131031\12f6f92d7e58349501f2cfc0716b8f1c6a2962eb\jetty-io-8.1.14.v20131031.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\org.springframework\spring-core\4.0.1.RELEASE\e39774d97c9dadfe49e6dfd16e3868bc1e390554\spring-core-4.0.1.RELEASE.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\commons-logging\commons-logging\1.1.1\5043bfebc3db072ed80fbd362e7caf00e885d8ae\commons-logging-1.1.1.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\org.springframework\spring-aop\4.0.1.RELEASE\ff68e4cfdbb2be3e8d8a7f34e7cbacc1860dfe75\spring-aop-4.0.1.RELEASE.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\org.springframework\spring-beans\4.0.1.RELEASE\605582e95fb62b43fb4a843babdcf739f3497e92\spring-beans-4.0.1.RELEASE.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\org.springframework\spring-context\4.0.1.RELEASE\cb996939c8d48ae55ec933041f17e7fba4d9e27d\spring-context-4.0.1.RELEASE.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\org.springframework\spring-expression\4.0.1.RELEASE\452cb22401e868a1e79677dd22b6a3097fc603fa\spring-expression-4.0.1.RELEASE.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\org.slf4j\jcl-over-slf4j\1.7.5\cd5970bd13fa85f7bed41ca606d6daf7cbf1365\jcl-over-slf4j-1.7.5.jar;C:\Users\peter\.gradle\caches\modules-2\files-2.1\org.slf4j\slf4j-api\1.7.5\6b262da268f8ad9eff941b25503a9198f0a0ac93\slf4j-api-1.7.5.jar, user.name=peter, hibernate.bytecode.use_reflection_optimizer=false, hibernate.show_sql=true, hibernate.use_identifier_rollback=false, javax.persistence.validation.mode=AUTO, java.vm.specification.version=1.0, sun.arch.data.model=64, java.home=F:\java\sdk\jdk1.6.0_17\jre, java.specification.vendor=Sun Microsystems Inc., user.language=zh, awt.toolkit=sun.awt.windows.WToolkit, java.vm.info=mixed mode, java.version=1.6.0_17, hibernate.transaction.flush_before_completion=false, java.ext.dirs=F:\java\sdk\jdk1.6.0_17\jre\lib\ext;C:\Windows\Sun\Java\lib\ext, sun.boot.class.path=F:\java\sdk\jdk1.6.0_17\jre\lib\resources.jar;F:\java\sdk\jdk1.6.0_17\jre\lib\rt.jar;F:\java\sdk\jdk1.6.0_17\jre\lib\sunrsasign.jar;F:\java\sdk\jdk1.6.0_17\jre\lib\jsse.jar;F:\java\sdk\jdk1.6.0_17\jre\lib\jce.jar;F:\java\sdk\jdk1.6.0_17\jre\lib\charsets.jar;F:\java\sdk\jdk1.6.0_17\jre\classes, java.vendor=Sun Microsystems Inc., org.gradle.test.worker=1, file.separator=\, java.vendor.url.bug=http://java.sun.com/cgi-bin/bugreport.cgi, hibernate.connection.provider_class=org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider, hibernate.hbm2ddl.auto=update, sun.cpu.endian=little, sun.io.unicode.encoding=UnicodeLittle, hibernate.query.jpaql_strict_compliance=true, sun.desktop=windows, sun.cpu.isalist=amd64}
+16:13:04.038 [Test worker] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Setting dialect [org.hibernate.dialect.Oracle10gDialect]
+16:13:04.097 [Test worker] DEBUG o.h.p.entity.AbstractEntityPersister - Static SQL for entity: com.nsg.persistence.domain.Managedelement
+16:13:04.097 [Test worker] DEBUG o.h.p.entity.AbstractEntityPersister -  Version select: select ID from bill.Managedelement where ID =?
+16:13:04.097 [Test worker] DEBUG o.h.p.entity.AbstractEntityPersister -  Snapshot select: select managedele_.ID, managedele_.createTime as createTime0_, managedele_.name as name0_ from bill.Managedelement managedele_ where managedele_.ID=?
+16:13:04.097 [Test worker] DEBUG o.h.p.entity.AbstractEntityPersister -  Insert 0: insert into bill.Managedelement (createTime, name, ID) values (?, ?, ?)
+16:13:04.097 [Test worker] DEBUG o.h.p.entity.AbstractEntityPersister -  Update 0: update bill.Managedelement set createTime=?, name=? where ID=?
+16:13:04.098 [Test worker] DEBUG o.h.p.entity.AbstractEntityPersister -  Delete 0: delete from bill.Managedelement where ID=?
+16:13:04.109 [Test worker] DEBUG org.hibernate.loader.Loader - Static select for entity com.nsg.persistence.domain.Managedelement [NONE]: select managedele0_.ID as ID0_0_, managedele0_.createTime as createTime0_0_, managedele0_.name as name0_0_ from bill.Managedelement managedele0_ where managedele0_.ID=?
+16:13:04.109 [Test worker] DEBUG org.hibernate.loader.Loader - Static select for entity com.nsg.persistence.domain.Managedelement [READ]: select managedele0_.ID as ID0_0_, managedele0_.createTime as createTime0_0_, managedele0_.name as name0_0_ from bill.Managedelement managedele0_ where managedele0_.ID=?
+16:13:04.110 [Test worker] DEBUG org.hibernate.loader.Loader - Static select for entity com.nsg.persistence.domain.Managedelement [UPGRADE]: select managedele0_.ID as ID0_0_, managedele0_.createTime as createTime0_0_, managedele0_.name as name0_0_ from bill.Managedelement managedele0_ where managedele0_.ID=? for update
+16:13:04.110 [Test worker] DEBUG org.hibernate.loader.Loader - Static select for entity com.nsg.persistence.domain.Managedelement [UPGRADE_NOWAIT]: select managedele0_.ID as ID0_0_, managedele0_.createTime as createTime0_0_, managedele0_.name as name0_0_ from bill.Managedelement managedele0_ where managedele0_.ID=? for update nowait
+16:13:04.110 [Test worker] DEBUG org.hibernate.loader.Loader - Static select for entity com.nsg.persistence.domain.Managedelement [FORCE]: select managedele0_.ID as ID0_0_, managedele0_.createTime as createTime0_0_, managedele0_.name as name0_0_ from bill.Managedelement managedele0_ where managedele0_.ID=? for update nowait
+16:13:04.111 [Test worker] DEBUG org.hibernate.loader.Loader - Static select for entity com.nsg.persistence.domain.Managedelement [PESSIMISTIC_READ]: select managedele0_.ID as ID0_0_, managedele0_.createTime as createTime0_0_, managedele0_.name as name0_0_ from bill.Managedelement managedele0_ where managedele0_.ID=? for update
+16:13:04.111 [Test worker] DEBUG org.hibernate.loader.Loader - Static select for entity com.nsg.persistence.domain.Managedelement [PESSIMISTIC_WRITE]: select managedele0_.ID as ID0_0_, managedele0_.createTime as createTime0_0_, managedele0_.name as name0_0_ from bill.Managedelement managedele0_ where managedele0_.ID=? for update
+16:13:04.112 [Test worker] DEBUG org.hibernate.loader.Loader - Static select for entity com.nsg.persistence.domain.Managedelement [PESSIMISTIC_FORCE_INCREMENT]: select managedele0_.ID as ID0_0_, managedele0_.createTime as createTime0_0_, managedele0_.name as name0_0_ from bill.Managedelement managedele0_ where managedele0_.ID=? for update nowait
+16:13:04.112 [Test worker] DEBUG org.hibernate.loader.Loader - Static select for entity com.nsg.persistence.domain.Managedelement [OPTIMISTIC]: select managedele0_.ID as ID0_0_, managedele0_.createTime as createTime0_0_, managedele0_.name as name0_0_ from bill.Managedelement managedele0_ where managedele0_.ID=?
+16:13:04.112 [Test worker] DEBUG org.hibernate.loader.Loader - Static select for entity com.nsg.persistence.domain.Managedelement [OPTIMISTIC_FORCE_INCREMENT]: select managedele0_.ID as ID0_0_, managedele0_.createTime as createTime0_0_, managedele0_.name as name0_0_ from bill.Managedelement managedele0_ where managedele0_.ID=?
+16:13:04.117 [Test worker] DEBUG org.hibernate.loader.Loader - Static select for action ACTION_MERGE on entity com.nsg.persistence.domain.Managedelement: select managedele0_.ID as ID0_0_, managedele0_.createTime as createTime0_0_, managedele0_.name as name0_0_ from bill.Managedelement managedele0_ where managedele0_.ID=?
+16:13:04.118 [Test worker] DEBUG org.hibernate.loader.Loader - Static select for action ACTION_REFRESH on entity com.nsg.persistence.domain.Managedelement: select managedele0_.ID as ID0_0_, managedele0_.createTime as createTime0_0_, managedele0_.name as name0_0_ from bill.Managedelement managedele0_ where managedele0_.ID=?
+16:13:04.120 [Test worker] DEBUG o.h.internal.SessionFactoryRegistry - Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@584b62a7
+16:13:04.120 [Test worker] DEBUG o.h.internal.SessionFactoryRegistry - Registering SessionFactory: 833c2dd4-f72b-4eff-8609-13606597c7af (<unnamed>)
+16:13:04.120 [Test worker] DEBUG o.h.internal.SessionFactoryRegistry - Not binding SessionFactory to JNDI, no JNDI name configured
+16:13:04.120 [Test worker] DEBUG o.h.internal.SessionFactoryImpl - Instantiated session factory
+16:13:04.124 [Test worker] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+16:13:04.124 [Test worker] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000102: Fetching database metadata
+16:13:04.892 [Test worker] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000396: Updating schema
+16:13:04.893 [Test worker] DEBUG org.hibernate.cfg.Configuration - Processing hbm.xml files
+16:13:04.893 [Test worker] DEBUG org.hibernate.cfg.Configuration - Process annotated classes
+16:13:04.893 [Test worker] DEBUG org.hibernate.cfg.Configuration - Processing fk mappings (*ToOne and JoinedSubclass)
+16:13:04.894 [Test worker] DEBUG org.hibernate.cfg.Configuration - Processing extends queue
+16:13:04.894 [Test worker] DEBUG org.hibernate.cfg.Configuration - Processing extends queue
+16:13:04.894 [Test worker] DEBUG org.hibernate.cfg.Configuration - Processing collection mappings
+16:13:04.894 [Test worker] DEBUG org.hibernate.cfg.Configuration - Processing native query and ResultSetMapping mappings
+16:13:04.895 [Test worker] DEBUG org.hibernate.cfg.Configuration - Processing association property references
+16:13:04.895 [Test worker] DEBUG org.hibernate.cfg.Configuration - Processing foreign key constraints
+16:13:05.228 [Test worker] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000261: Table found: BILL.MANAGEDELEMENT
+16:13:05.228 [Test worker] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000037: Columns: [createtime, id, name]
+16:13:05.229 [Test worker] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000108: Foreign keys: []
+16:13:05.229 [Test worker] INFO  o.h.tool.hbm2ddl.TableMetadata - HHH000126: Indexes: [sys_c00117064]
+16:13:05.229 [Test worker] DEBUG o.h.i.f.i.DefaultIdentifierGeneratorFactory - Setting dialect [org.hibernate.dialect.Oracle10gDialect]
+16:13:05.229 [Test worker] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000232: Schema update complete
+16:13:05.246 [Test worker] DEBUG o.h.internal.SessionFactoryImpl - Checking 0 named HQL queries
+16:13:05.246 [Test worker] DEBUG o.h.internal.SessionFactoryImpl - Checking 0 named SQL queries
+16:13:05.255 [Test worker] DEBUG o.h.s.internal.StatisticsInitiator - Statistics initialized [enabled=false]
+16:13:05.280 [Test worker] DEBUG o.h.e.i.EntityManagerFactoryRegistry - Initializing EntityManagerFactoryRegistry : org.hibernate.ejb.internal.EntityManagerFactoryRegistry@17072b90
+16:13:05.281 [Test worker] DEBUG o.h.e.i.EntityManagerFactoryRegistry - Registering EntityManagerFactory: default 
+16:13:05.285 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'entityManagerFactory' to allow for resolving potential circular references
+16:13:05.287 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+16:13:05.288 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'entityManagerFactory'
+16:13:05.288 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'entityManager'
+16:13:05.289 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'entityManager'
+16:13:05.289 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'JPAConfig'
+16:13:05.289 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'entityManagerFactory'
+16:13:05.290 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'entityManager' via factory method to bean named 'entityManagerFactory'
+16:13:05.323 [Test worker] DEBUG org.hibernate.internal.SessionImpl - Opened session at timestamp: 13964263853
+16:13:05.334 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'entityManager' to allow for resolving potential circular references
+16:13:05.336 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+16:13:05.339 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'entityManager'
+16:13:05.339 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'transactionManager'
+16:13:05.339 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'transactionManager'
+16:13:05.340 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'JPAConfig'
+16:13:05.345 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'entityManagerFactory'
+16:13:05.348 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'transactionManager' to allow for resolving potential circular references
+16:13:05.351 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'transactionManager'
+16:13:05.352 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+16:13:05.353 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'transactionManager'
+16:13:05.354 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'hibernateExceptionTranslator'
+16:13:05.354 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.data.repository.core.support.RepositoryInterfaceAwareBeanPostProcessor#0'
+16:13:05.354 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor#0'
+16:13:05.354 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'managedelementsRepository'
+16:13:05.354 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'managedelementsRepository'
+16:13:05.365 [Test worker] DEBUG o.s.b.f.annotation.InjectionMetadata - Registered injected element on class [org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean]: PersistenceElement for public void org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.setEntityManager(javax.persistence.EntityManager)
+16:13:05.366 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'managedelementsRepository' to allow for resolving potential circular references
+16:13:05.371 [Test worker] DEBUG o.s.b.f.annotation.InjectionMetadata - Processing injected method of bean 'managedelementsRepository': PersistenceElement for public void org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.setEntityManager(javax.persistence.EntityManager)
+16:13:05.379 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean '(inner bean)'
+16:13:05.380 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean '(inner bean)#1'
+16:13:05.385 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name '(inner bean)#1'
+16:13:05.385 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+16:13:05.386 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean '(inner bean)#1'
+16:13:05.386 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+16:13:05.393 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+16:13:05.394 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean '(inner bean)'
+16:13:05.394 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean '(inner bean)#2'
+16:13:05.395 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'entityManagerFactory'
+16:13:05.398 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+16:13:05.398 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean '(inner bean)#2'
+16:13:05.403 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'hibernateExceptionTranslator'
+16:13:05.405 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'managedelementsRepository'
+16:13:05.416 [Test worker] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+16:13:05.416 [Test worker] DEBUG org.hibernate.internal.SessionImpl - Opened session at timestamp: 13964263854
+16:13:05.417 [Test worker] DEBUG o.s.o.jpa.EntityManagerFactoryUtils - Closing JPA EntityManager
+16:13:05.419 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+16:13:05.420 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'managedelementsRepository'
+16:13:05.421 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.config.internalAutoProxyCreator'
+16:13:05.422 [Test worker] DEBUG o.s.c.s.GenericApplicationContext - Unable to locate LifecycleProcessor with name 'lifecycleProcessor': using default [org.springframework.context.support.DefaultLifecycleProcessor@13baa8d8]
+16:13:05.422 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'lifecycleProcessor'
+16:13:05.424 [Test worker] DEBUG o.s.c.e.PropertySourcesPropertyResolver - Searching for key 'spring.liveBeansView.mbeanDomain' in [systemProperties]
+16:13:05.424 [Test worker] DEBUG o.s.c.e.PropertySourcesPropertyResolver - Searching for key 'spring.liveBeansView.mbeanDomain' in [systemEnvironment]
+16:13:05.424 [Test worker] DEBUG o.s.c.e.PropertySourcesPropertyResolver - Could not find key 'spring.liveBeansView.mbeanDomain' in any property source. Returning [null]
+16:13:05.424 [Test worker] DEBUG o.s.t.c.CacheAwareContextLoaderDelegate - Storing ApplicationContext in cache under key [[MergedContextConfiguration@6bdc64a5 testClass = JPAMappingTests, locations = '{}', classes = '{class com.nsg.config.JPAConfig}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+16:13:05.425 [Test worker] DEBUG o.s.t.c.s.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[TestContext@1b845568 testClass = JPAMappingTests, testInstance = com.nsg.persistence.integretion.JPAMappingTests@d032cf5, testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@6bdc64a5 testClass = JPAMappingTests, locations = '{}', classes = '{class com.nsg.config.JPAConfig}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]].
+16:13:05.425 [Test worker] DEBUG o.s.t.c.CacheAwareContextLoaderDelegate - Retrieved ApplicationContext from cache with key [[MergedContextConfiguration@6bdc64a5 testClass = JPAMappingTests, locations = '{}', classes = '{class com.nsg.config.JPAConfig}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+16:13:05.427 [Test worker] DEBUG o.s.b.f.annotation.InjectionMetadata - Processing injected method of bean 'com.nsg.persistence.integretion.JPAMappingTests': AutowiredFieldElement for javax.persistence.EntityManager com.nsg.persistence.integretion.JPAMappingTests.manager
+16:13:05.428 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'entityManager'
+16:13:05.428 [Test worker] DEBUG o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - Autowiring by type from bean name 'com.nsg.persistence.integretion.JPAMappingTests' to bean named 'entityManager'
+16:13:05.429 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+16:13:05.430 [Test worker] DEBUG o.s.t.a.AnnotationTransactionAttributeSource - Adding transactional method 'thatItemCustomMappingWorks' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+16:13:05.433 [Test worker] DEBUG o.s.a.f.a.InfrastructureAdvisorAutoProxyCreator - Creating implicit proxy for bean 'com.nsg.persistence.integretion.JPAMappingTests' with 0 common interceptors and 1 specific interceptors
+16:13:05.436 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Creating CGLIB proxy: target source is SingletonTargetSource for target object [com.nsg.persistence.integretion.JPAMappingTests@d032cf5]
+16:13:05.446 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Unable to apply any optimisations to advised method: public void com.nsg.persistence.integretion.JPAMappingTests.thatItemCustomMappingWorks() throws java.lang.Exception
+16:13:05.446 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Found finalize() method - using NO_OVERRIDE
+16:13:05.446 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Found 'hashCode' method: public native int java.lang.Object.hashCode()
+16:13:05.446 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Unable to apply any optimisations to advised method: protected native java.lang.Object java.lang.Object.clone() throws java.lang.CloneNotSupportedException
+16:13:05.446 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Found 'equals' method: public boolean java.lang.Object.equals(java.lang.Object)
+16:13:05.446 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Unable to apply any optimisations to advised method: public java.lang.String java.lang.Object.toString()
+16:13:05.446 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Method is declared on Advised interface: public abstract int org.springframework.aop.framework.Advised.indexOf(org.springframework.aop.Advisor)
+16:13:05.446 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Method is declared on Advised interface: public abstract int org.springframework.aop.framework.Advised.indexOf(org.aopalliance.aop.Advice)
+16:13:05.446 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.setTargetSource(org.springframework.aop.TargetSource)
+16:13:05.446 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.addAdvisor(int,org.springframework.aop.Advisor) throws org.springframework.aop.framework.AopConfigException
+16:13:05.447 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.addAdvisor(org.springframework.aop.Advisor) throws org.springframework.aop.framework.AopConfigException
+16:13:05.447 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.isProxyTargetClass()
+16:13:05.447 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.setExposeProxy(boolean)
+16:13:05.447 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.isExposeProxy()
+16:13:05.447 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.isFrozen()
+16:13:05.447 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Method is declared on Advised interface: public abstract org.springframework.aop.TargetSource org.springframework.aop.framework.Advised.getTargetSource()
+16:13:05.447 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.setPreFiltered(boolean)
+16:13:05.447 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.addAdvice(org.aopalliance.aop.Advice) throws org.springframework.aop.framework.AopConfigException
+16:13:05.447 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.addAdvice(int,org.aopalliance.aop.Advice) throws org.springframework.aop.framework.AopConfigException
+16:13:05.447 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.isPreFiltered()
+16:13:05.447 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Method is declared on Advised interface: public abstract java.lang.Class[] org.springframework.aop.framework.Advised.getProxiedInterfaces()
+16:13:05.447 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.isInterfaceProxied(java.lang.Class)
+16:13:05.448 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Method is declared on Advised interface: public abstract org.springframework.aop.Advisor[] org.springframework.aop.framework.Advised.getAdvisors()
+16:13:05.448 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.removeAdvisor(org.springframework.aop.Advisor)
+16:13:05.448 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.removeAdvisor(int) throws org.springframework.aop.framework.AopConfigException
+16:13:05.448 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.replaceAdvisor(org.springframework.aop.Advisor,org.springframework.aop.Advisor) throws org.springframework.aop.framework.AopConfigException
+16:13:05.448 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.removeAdvice(org.aopalliance.aop.Advice)
+16:13:05.448 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Method is declared on Advised interface: public abstract java.lang.String org.springframework.aop.framework.Advised.toProxyConfigString()
+16:13:05.448 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Method is declared on Advised interface: public abstract java.lang.Class org.springframework.aop.TargetClassAware.getTargetClass()
+16:13:05.459 [Test worker] DEBUG o.s.t.c.CacheAwareContextLoaderDelegate - Retrieved ApplicationContext from cache with key [[MergedContextConfiguration@6bdc64a5 testClass = JPAMappingTests, locations = '{}', classes = '{class com.nsg.config.JPAConfig}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+16:13:05.460 [Test worker] DEBUG o.s.t.a.AnnotationTransactionAttributeSource - Adding transactional method 'thatItemCustomMappingWorks' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+16:13:05.461 [Test worker] DEBUG o.s.t.c.t.TransactionalTestExecutionListener - Explicit transaction definition [PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''] found for test context [TestContext@1b845568 testClass = JPAMappingTests, testInstance = com.nsg.persistence.integretion.JPAMappingTests@d032cf5, testMethod = thatItemCustomMappingWorks@JPAMappingTests, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@6bdc64a5 testClass = JPAMappingTests, locations = '{}', classes = '{class com.nsg.config.JPAConfig}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+16:13:05.461 [Test worker] DEBUG o.s.t.c.CacheAwareContextLoaderDelegate - Retrieved ApplicationContext from cache with key [[MergedContextConfiguration@6bdc64a5 testClass = JPAMappingTests, locations = '{}', classes = '{class com.nsg.config.JPAConfig}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+16:13:05.461 [Test worker] DEBUG o.s.t.c.t.TransactionalTestExecutionListener - Retrieved @TransactionConfiguration [@org.springframework.test.context.transaction.TransactionConfiguration(transactionManager=transactionManager, defaultRollback=true)] for test class [class com.nsg.persistence.integretion.JPAMappingTests]
+16:13:05.462 [Test worker] DEBUG o.s.t.c.t.TransactionalTestExecutionListener - Retrieved TransactionConfigurationAttributes [TransactionConfigurationAttributes@7e938b4a transactionManagerName = 'transactionManager', defaultRollback = true] for class [class com.nsg.persistence.integretion.JPAMappingTests]
+16:13:05.462 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'transactionManager'
+16:13:05.464 [Test worker] DEBUG o.s.orm.jpa.JpaTransactionManager - Creating new transaction with name [thatItemCustomMappingWorks]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+16:13:05.465 [Test worker] DEBUG org.hibernate.internal.SessionImpl - Opened session at timestamp: 13964263854
+16:13:05.465 [Test worker] DEBUG o.s.orm.jpa.JpaTransactionManager - Opened new EntityManager [org.hibernate.ejb.EntityManagerImpl@7926b165] for JPA transaction
+16:13:05.467 [Test worker] DEBUG o.h.e.t.spi.AbstractTransactionImpl - begin
+16:13:05.467 [Test worker] DEBUG o.h.e.j.i.LogicalConnectionImpl - Obtaining JDBC connection
+16:13:06.778 [Test worker] DEBUG o.h.e.j.i.LogicalConnectionImpl - Obtained JDBC connection
+16:13:06.778 [Test worker] DEBUG o.h.e.t.i.jdbc.JdbcTransaction - initial autocommit status: true
+16:13:06.778 [Test worker] DEBUG o.h.e.t.i.jdbc.JdbcTransaction - disabling autocommit
+16:13:06.779 [Test worker] DEBUG o.s.orm.jpa.JpaTransactionManager - Exposing JPA transaction as JDBC transaction [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@6f156508]
+16:13:06.780 [Test worker] DEBUG o.s.t.c.t.TransactionalTestExecutionListener - No method-level @Rollback override: using default rollback [true] for test context [TestContext@1b845568 testClass = JPAMappingTests, testInstance = com.nsg.persistence.integretion.JPAMappingTests@d032cf5, testMethod = thatItemCustomMappingWorks@JPAMappingTests, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@6bdc64a5 testClass = JPAMappingTests, locations = '{}', classes = '{class com.nsg.config.JPAConfig}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+16:13:06.780 [Test worker] INFO  o.s.t.c.t.TransactionalTestExecutionListener - Began transaction (1): transaction manager [org.springframework.orm.jpa.JpaTransactionManager@6f548414]; rollback [true]
+16:13:06.801 [Test worker] DEBUG o.h.e.j.i.LogicalConnectionImpl - Obtaining JDBC connection
+16:13:07.094 [Test worker] DEBUG o.h.e.j.i.LogicalConnectionImpl - Obtained JDBC connection
+16:13:07.519 [Test worker] WARN  o.h.e.j.i.JdbcResourceRegistryImpl - HHH000387: ResultSet's statement was not registered
+16:14:34.924 [Test worker] WARN  o.h.e.j.i.JdbcResourceRegistryImpl - HHH000387: ResultSet's statement was not registered
+16:14:44.011 [Test worker] WARN  o.h.e.j.i.JdbcResourceRegistryImpl - HHH000387: ResultSet's statement was not registered
+16:14:47.608 [Test worker] DEBUG o.s.t.c.t.TransactionalTestExecutionListener - No method-level @Rollback override: using default rollback [true] for test context [TestContext@1b845568 testClass = JPAMappingTests, testInstance = com.nsg.persistence.integretion.JPAMappingTests@d032cf5, testMethod = thatItemCustomMappingWorks@JPAMappingTests, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@6bdc64a5 testClass = JPAMappingTests, locations = '{}', classes = '{class com.nsg.config.JPAConfig}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+16:14:47.609 [Test worker] DEBUG o.s.orm.jpa.JpaTransactionManager - Initiating transaction rollback
+16:14:47.609 [Test worker] DEBUG o.s.orm.jpa.JpaTransactionManager - Rolling back JPA transaction on EntityManager [org.hibernate.ejb.EntityManagerImpl@7926b165]
+16:14:47.609 [Test worker] DEBUG o.h.e.t.spi.AbstractTransactionImpl - rolling back
+16:14:47.628 [Test worker] DEBUG o.h.e.t.i.jdbc.JdbcTransaction - rolled JDBC Connection
+16:14:47.628 [Test worker] DEBUG o.h.e.t.i.jdbc.JdbcTransaction - re-enabling autocommit
+16:14:47.629 [Test worker] DEBUG o.s.orm.jpa.JpaTransactionManager - Closing JPA EntityManager [org.hibernate.ejb.EntityManagerImpl@7926b165] after transaction
+16:14:47.629 [Test worker] DEBUG o.s.o.jpa.EntityManagerFactoryUtils - Closing JPA EntityManager
+16:14:47.629 [Test worker] DEBUG o.h.e.j.i.LogicalConnectionImpl - Releasing JDBC connection
+16:14:47.643 [Test worker] DEBUG o.h.e.j.i.LogicalConnectionImpl - Released JDBC connection
+16:14:47.643 [Test worker] INFO  o.s.t.c.t.TransactionalTestExecutionListener - Rolled back transaction after test execution for test context [TestContext@1b845568 testClass = JPAMappingTests, testInstance = com.nsg.persistence.integretion.JPAMappingTests@d032cf5, testMethod = thatItemCustomMappingWorks@JPAMappingTests, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@6bdc64a5 testClass = JPAMappingTests, locations = '{}', classes = '{class com.nsg.config.JPAConfig}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+16:14:47.646 [Test worker] DEBUG o.s.t.c.s.DirtiesContextTestExecutionListener - After test method: context [[TestContext@1b845568 testClass = JPAMappingTests, testInstance = com.nsg.persistence.integretion.JPAMappingTests@d032cf5, testMethod = thatItemCustomMappingWorks@JPAMappingTests, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@6bdc64a5 testClass = JPAMappingTests, locations = '{}', classes = '{class com.nsg.config.JPAConfig}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]], class dirties context [false], class mode [null], method dirties context [false].
+16:14:47.647 [Test worker] DEBUG o.s.t.c.w.ServletTestExecutionListener - Resetting RequestContextHolder for test context [TestContext@1b845568 testClass = JPAMappingTests, testInstance = com.nsg.persistence.integretion.JPAMappingTests@d032cf5, testMethod = thatItemCustomMappingWorks@JPAMappingTests, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@6bdc64a5 testClass = JPAMappingTests, locations = '{}', classes = '{class com.nsg.config.JPAConfig}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+16:14:47.652 [Test worker] DEBUG o.s.t.c.s.DirtiesContextTestExecutionListener - After test class: context [[TestContext@1b845568 testClass = JPAMappingTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@6bdc64a5 testClass = JPAMappingTests, locations = '{}', classes = '{class com.nsg.config.JPAConfig}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]], dirtiesContext [false].
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

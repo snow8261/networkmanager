@@ -6,8 +6,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.SortedMap;
-import java.util.Vector;
 
 import org.snmp4j.CommunityTarget;
 import org.snmp4j.PDU;
@@ -35,7 +33,6 @@ import org.snmp4j.util.TableUtils;
 import org.snmp4j.util.TreeUtils;
 
 import com.nsg.collector.service.snmp.annotation.MibObjectType;
-import com.nsg.collector.service.snmp.mibobject.IfTable;
 import com.nsg.collector.service.snmp.mibobject.SnmpObject;
 import com.nsg.core.constant.SmiType;
 
@@ -530,9 +527,9 @@ public class SnmpV2Util implements SnmpUtil {
 		return strAddress;
 	}
 
-	public static void main(String[] args) throws IOException {
-		SnmpUtil snmpUtil = new SnmpV2Util("127.0.0.1", "public", 1);
-		long numbers = snmpUtil.snmpGetLong(".1.3.6.1.2.1.1.7.0");
-		System.out.println(numbers);
-	}
+//	public static void main(String[] args) throws IOException {
+//		SnmpUtil snmpUtil = new SnmpV2Util("127.0.0.1", "public", 1);
+//		long numbers = snmpUtil.snmpGetLong(".1.3.6.1.2.1.1.7.0");
+//		System.out.println(numbers);
+//	}
 }

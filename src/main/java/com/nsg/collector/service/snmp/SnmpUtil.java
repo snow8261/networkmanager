@@ -7,14 +7,11 @@ package com.nsg.collector.service.snmp;
 import java.io.IOException;
 import java.util.List;
 
-import org.snmp4j.PDU;
 import org.snmp4j.smi.OID;
 import org.snmp4j.smi.VariableBinding;
 import org.snmp4j.util.TableEvent;
 
-import com.nsg.collector.service.snmp.mibobject.IfTable;
 import com.nsg.collector.service.snmp.mibobject.SnmpObject;
-import com.nsg.collector.service.snmp.mibobject.SystemInfo;
 import com.nsg.core.constant.SmiType;
 
 /**

@@ -143,11 +143,18 @@ public class SnmpTests {
 		}
 	}
 	
+	@Test
+	public void _10_test_snmp_getTablewithindex_custom_field() throws Exception {
+		SnmpUtil snmpUtil = new SnmpV2Util("127.0.0.1", "public", 1);
+		List<String> indexes=new ArrayList<String>();
+		indexes.add("50");
+		indexes.add("32");
+		String[] fields=new String[]{"ifInOctets","ifOutOctets"};
+		List<IfTable> iftables = snmpUtil.getTable(IfTable.class,indexes,fields);
+		for (IfTable ifTable : iftables) {
+			System.out.println(ifTable);
+		}
+	}
 	
-	// @Test
-	// public void _2_test_snmp_getNext_local() throws Exception {
-	// SnmpUtil snmpUtil=new SnmpV2Util("127.0.0.1","public",1);
-	// long numbers =snmpUtil.snmpGetLong("1.3.6.1.2.1.1.5.0");
-	// assertEquals(76,numbers);
-	// }
+
 }

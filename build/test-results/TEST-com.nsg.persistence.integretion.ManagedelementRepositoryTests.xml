@@ -1,0 +1,182 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<testsuite name="com.nsg.persistence.integretion.ManagedelementRepositoryTests" tests="1" failures="0" errors="0" timestamp="2014-04-02T08:14:47" hostname="peter-PC" time="0.824">
+  <properties/>
+  <testcase name="meInRepositoryTest" classname="com.nsg.persistence.integretion.ManagedelementRepositoryTests" time="0.824"/>
+  <system-out><![CDATA[16:14:47.657 [Test worker] DEBUG o.s.t.c.j.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class com.nsg.persistence.integretion.ManagedelementRepositoryTests].
+16:14:47.658 [Test worker] DEBUG o.s.t.c.s.AbstractDelegatingSmartContextLoader - Delegating to AnnotationConfigContextLoader to process context configuration [ContextConfigurationAttributes@1d262f7c declaringClass = 'com.nsg.persistence.integretion.ManagedelementRepositoryTests', locations = '{}', classes = '{class com.nsg.config.JPAConfig}', inheritLocations = true, initializers = '{}', inheritInitializers = true, name = [null], contextLoaderClass = 'org.springframework.test.context.ContextLoader'].
+16:14:47.659 [Test worker] DEBUG o.s.test.context.ContextLoaderUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.nsg.persistence.integretion.ManagedelementRepositoryTests]
+16:14:47.659 [Test worker] DEBUG o.s.test.context.TestContextManager - @TestExecutionListeners is not present for class [class com.nsg.persistence.integretion.ManagedelementRepositoryTests]: using defaults.
+16:14:47.660 [Test worker] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.nsg.persistence.integretion.ManagedelementRepositoryTests]
+16:14:47.660 [Test worker] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.nsg.persistence.integretion.ManagedelementRepositoryTests]
+16:14:47.661 [Test worker] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.nsg.persistence.integretion.ManagedelementRepositoryTests]
+16:14:47.661 [Test worker] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.nsg.persistence.integretion.ManagedelementRepositoryTests]
+16:14:47.661 [Test worker] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.nsg.persistence.integretion.ManagedelementRepositoryTests]
+16:14:47.661 [Test worker] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.nsg.persistence.integretion.ManagedelementRepositoryTests]
+16:14:47.662 [Test worker] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.nsg.persistence.integretion.ManagedelementRepositoryTests]
+16:14:47.662 [Test worker] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.nsg.persistence.integretion.ManagedelementRepositoryTests]
+16:14:47.664 [Test worker] DEBUG o.s.t.c.CacheAwareContextLoaderDelegate - Retrieved ApplicationContext from cache with key [[MergedContextConfiguration@7d8e9adf testClass = ManagedelementRepositoryTests, locations = '{}', classes = '{class com.nsg.config.JPAConfig}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+16:14:47.665 [Test worker] DEBUG o.s.t.c.s.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[TestContext@1d59e6df testClass = ManagedelementRepositoryTests, testInstance = com.nsg.persistence.integretion.ManagedelementRepositoryTests@79444986, testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@7d8e9adf testClass = ManagedelementRepositoryTests, locations = '{}', classes = '{class com.nsg.config.JPAConfig}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]].
+16:14:47.665 [Test worker] DEBUG o.s.t.c.CacheAwareContextLoaderDelegate - Retrieved ApplicationContext from cache with key [[MergedContextConfiguration@7d8e9adf testClass = ManagedelementRepositoryTests, locations = '{}', classes = '{class com.nsg.config.JPAConfig}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+16:14:47.673 [Test worker] DEBUG o.s.b.f.annotation.InjectionMetadata - Processing injected method of bean 'com.nsg.persistence.integretion.ManagedelementRepositoryTests': AutowiredFieldElement for com.nsg.persistence.repository.ManagedelementsRepository com.nsg.persistence.integretion.ManagedelementRepositoryTests.merepository
+16:14:47.674 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'managedelementsRepository'
+16:14:47.686 [Test worker] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+16:14:47.687 [Test worker] DEBUG org.hibernate.internal.SessionImpl - Opened session at timestamp: 13964264876
+16:14:47.687 [Test worker] DEBUG o.s.o.jpa.EntityManagerFactoryUtils - Closing JPA EntityManager
+16:14:47.699 [Test worker] DEBUG o.s.d.j.r.query.SimpleJpaQuery - Looking up query for method findById
+16:14:47.701 [Test worker] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query Managedelement.findById
+16:14:47.702 [Test worker] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+16:14:47.702 [Test worker] DEBUG org.hibernate.internal.SessionImpl - Opened session at timestamp: 13964264877
+16:14:47.702 [Test worker] DEBUG o.s.o.jpa.EntityManagerFactoryUtils - Closing JPA EntityManager
+16:14:47.734 [Test worker] DEBUG o.s.aop.framework.JdkDynamicAopProxy - Creating JDK dynamic proxy: target source is SingletonTargetSource for target object [org.springframework.data.jpa.repository.support.SimpleJpaRepository@28d320d6]
+16:14:47.737 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+16:14:47.740 [Test worker] DEBUG o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - Autowiring by type from bean name 'com.nsg.persistence.integretion.ManagedelementRepositoryTests' to bean named 'managedelementsRepository'
+16:14:47.740 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+16:14:47.741 [Test worker] DEBUG o.s.t.a.AnnotationTransactionAttributeSource - Adding transactional method 'meInRepositoryTest' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+16:14:47.741 [Test worker] DEBUG o.s.a.f.a.InfrastructureAdvisorAutoProxyCreator - Creating implicit proxy for bean 'com.nsg.persistence.integretion.ManagedelementRepositoryTests' with 0 common interceptors and 1 specific interceptors
+16:14:47.741 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Creating CGLIB proxy: target source is SingletonTargetSource for target object [com.nsg.persistence.integretion.ManagedelementRepositoryTests@79444986]
+16:14:47.741 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Unable to apply any optimisations to advised method: public void com.nsg.persistence.integretion.ManagedelementRepositoryTests.meInRepositoryTest()
+16:14:47.741 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Found finalize() method - using NO_OVERRIDE
+16:14:47.741 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Found 'hashCode' method: public native int java.lang.Object.hashCode()
+16:14:47.742 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Unable to apply any optimisations to advised method: protected native java.lang.Object java.lang.Object.clone() throws java.lang.CloneNotSupportedException
+16:14:47.742 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Found 'equals' method: public boolean java.lang.Object.equals(java.lang.Object)
+16:14:47.742 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Unable to apply any optimisations to advised method: public java.lang.String java.lang.Object.toString()
+16:14:47.742 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Method is declared on Advised interface: public abstract int org.springframework.aop.framework.Advised.indexOf(org.springframework.aop.Advisor)
+16:14:47.742 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Method is declared on Advised interface: public abstract int org.springframework.aop.framework.Advised.indexOf(org.aopalliance.aop.Advice)
+16:14:47.742 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.setTargetSource(org.springframework.aop.TargetSource)
+16:14:47.742 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.addAdvisor(int,org.springframework.aop.Advisor) throws org.springframework.aop.framework.AopConfigException
+16:14:47.742 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.addAdvisor(org.springframework.aop.Advisor) throws org.springframework.aop.framework.AopConfigException
+16:14:47.742 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.isProxyTargetClass()
+16:14:47.742 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.setExposeProxy(boolean)
+16:14:47.742 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.isExposeProxy()
+16:14:47.742 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.isFrozen()
+16:14:47.742 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Method is declared on Advised interface: public abstract org.springframework.aop.TargetSource org.springframework.aop.framework.Advised.getTargetSource()
+16:14:47.742 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.setPreFiltered(boolean)
+16:14:47.742 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.addAdvice(org.aopalliance.aop.Advice) throws org.springframework.aop.framework.AopConfigException
+16:14:47.742 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.addAdvice(int,org.aopalliance.aop.Advice) throws org.springframework.aop.framework.AopConfigException
+16:14:47.742 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.isPreFiltered()
+16:14:47.745 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Method is declared on Advised interface: public abstract java.lang.Class[] org.springframework.aop.framework.Advised.getProxiedInterfaces()
+16:14:47.745 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.isInterfaceProxied(java.lang.Class)
+16:14:47.745 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Method is declared on Advised interface: public abstract org.springframework.aop.Advisor[] org.springframework.aop.framework.Advised.getAdvisors()
+16:14:47.745 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.removeAdvisor(org.springframework.aop.Advisor)
+16:14:47.745 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.removeAdvisor(int) throws org.springframework.aop.framework.AopConfigException
+16:14:47.745 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.replaceAdvisor(org.springframework.aop.Advisor,org.springframework.aop.Advisor) throws org.springframework.aop.framework.AopConfigException
+16:14:47.745 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.removeAdvice(org.aopalliance.aop.Advice)
+16:14:47.745 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Method is declared on Advised interface: public abstract java.lang.String org.springframework.aop.framework.Advised.toProxyConfigString()
+16:14:47.746 [Test worker] DEBUG o.s.aop.framework.CglibAopProxy - Method is declared on Advised interface: public abstract java.lang.Class org.springframework.aop.TargetClassAware.getTargetClass()
+16:14:47.755 [Test worker] DEBUG o.s.t.c.CacheAwareContextLoaderDelegate - Retrieved ApplicationContext from cache with key [[MergedContextConfiguration@7d8e9adf testClass = ManagedelementRepositoryTests, locations = '{}', classes = '{class com.nsg.config.JPAConfig}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+16:14:47.756 [Test worker] DEBUG o.s.t.a.AnnotationTransactionAttributeSource - Adding transactional method 'meInRepositoryTest' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+16:14:47.756 [Test worker] DEBUG o.s.t.c.t.TransactionalTestExecutionListener - Explicit transaction definition [PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''] found for test context [TestContext@1d59e6df testClass = ManagedelementRepositoryTests, testInstance = com.nsg.persistence.integretion.ManagedelementRepositoryTests@79444986, testMethod = meInRepositoryTest@ManagedelementRepositoryTests, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@7d8e9adf testClass = ManagedelementRepositoryTests, locations = '{}', classes = '{class com.nsg.config.JPAConfig}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+16:14:47.756 [Test worker] DEBUG o.s.t.c.CacheAwareContextLoaderDelegate - Retrieved ApplicationContext from cache with key [[MergedContextConfiguration@7d8e9adf testClass = ManagedelementRepositoryTests, locations = '{}', classes = '{class com.nsg.config.JPAConfig}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+16:14:47.756 [Test worker] DEBUG o.s.t.c.t.TransactionalTestExecutionListener - Retrieved @TransactionConfiguration [@org.springframework.test.context.transaction.TransactionConfiguration(transactionManager=transactionManager, defaultRollback=true)] for test class [class com.nsg.persistence.integretion.ManagedelementRepositoryTests]
+16:14:47.756 [Test worker] DEBUG o.s.t.c.t.TransactionalTestExecutionListener - Retrieved TransactionConfigurationAttributes [TransactionConfigurationAttributes@77b4ee5e transactionManagerName = 'transactionManager', defaultRollback = true] for class [class com.nsg.persistence.integretion.ManagedelementRepositoryTests]
+16:14:47.756 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'transactionManager'
+16:14:47.756 [Test worker] DEBUG o.s.orm.jpa.JpaTransactionManager - Creating new transaction with name [meInRepositoryTest]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+16:14:47.757 [Test worker] DEBUG org.hibernate.internal.SessionImpl - Opened session at timestamp: 13964264877
+16:14:47.757 [Test worker] DEBUG o.s.orm.jpa.JpaTransactionManager - Opened new EntityManager [org.hibernate.ejb.EntityManagerImpl@78d9ab8] for JPA transaction
+16:14:47.757 [Test worker] DEBUG o.h.e.t.spi.AbstractTransactionImpl - begin
+16:14:47.757 [Test worker] DEBUG o.h.e.j.i.LogicalConnectionImpl - Obtaining JDBC connection
+16:14:48.146 [Test worker] DEBUG o.h.e.j.i.LogicalConnectionImpl - Obtained JDBC connection
+16:14:48.146 [Test worker] DEBUG o.h.e.t.i.jdbc.JdbcTransaction - initial autocommit status: true
+16:14:48.147 [Test worker] DEBUG o.h.e.t.i.jdbc.JdbcTransaction - disabling autocommit
+16:14:48.147 [Test worker] DEBUG o.s.orm.jpa.JpaTransactionManager - Exposing JPA transaction as JDBC transaction [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@45a27a8f]
+16:14:48.147 [Test worker] DEBUG o.s.t.c.t.TransactionalTestExecutionListener - No method-level @Rollback override: using default rollback [true] for test context [TestContext@1d59e6df testClass = ManagedelementRepositoryTests, testInstance = com.nsg.persistence.integretion.ManagedelementRepositoryTests@79444986, testMethod = meInRepositoryTest@ManagedelementRepositoryTests, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@7d8e9adf testClass = ManagedelementRepositoryTests, locations = '{}', classes = '{class com.nsg.config.JPAConfig}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+16:14:48.147 [Test worker] INFO  o.s.t.c.t.TransactionalTestExecutionListener - Began transaction (1): transaction manager [org.springframework.orm.jpa.JpaTransactionManager@6f548414]; rollback [true]
+16:14:48.157 [Test worker] DEBUG o.s.d.r.c.s.TransactionalRepositoryProxyPostProcessor$CustomAnnotationTransactionAttributeSource - Adding transactional method 'save' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+16:14:48.158 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'transactionManager'
+16:14:48.161 [Test worker] DEBUG o.s.orm.jpa.JpaTransactionManager - Found thread-bound EntityManager [org.hibernate.ejb.EntityManagerImpl@78d9ab8] for JPA transaction
+16:14:48.162 [Test worker] DEBUG o.s.orm.jpa.JpaTransactionManager - Participating in existing transaction
+16:14:48.183 [Test worker] DEBUG org.hibernate.loader.Loader - Loading entity: [com.nsg.persistence.domain.Managedelement#523125281119508099]
+16:14:48.187 [Test worker] DEBUG org.hibernate.SQL - select managedele0_.ID as ID0_0_, managedele0_.createTime as createTime0_0_, managedele0_.name as name0_0_ from bill.Managedelement managedele0_ where managedele0_.ID=?
+Hibernate: select managedele0_.ID as ID0_0_, managedele0_.createTime as createTime0_0_, managedele0_.name as name0_0_ from bill.Managedelement managedele0_ where managedele0_.ID=?
+16:14:48.226 [Test worker] DEBUG o.h.e.i.StatefulPersistenceContext - Initializing non-lazy collections
+16:14:48.226 [Test worker] DEBUG org.hibernate.loader.Loader - Done entity load
+16:14:48.235 [Test worker] DEBUG o.h.e.i.AbstractSaveEventListener - Generated identifier: 523125281119508099, using strategy: org.hibernate.id.Assigned
+16:14:48.243 [Test worker] DEBUG o.h.e.criteria.CriteriaQueryCompiler - Rendered criteria query -> select generatedAlias0 from Managedelement as generatedAlias0 where generatedAlias0.id=:param0
+16:14:48.268 [Test worker] DEBUG o.h.h.i.ast.QueryTranslatorImpl - parse() - HQL: select generatedAlias0 from com.nsg.persistence.domain.Managedelement as generatedAlias0 where generatedAlias0.id=:param0
+16:14:48.274 [Test worker] DEBUG o.h.h.i.ast.QueryTranslatorImpl - --- HQL AST ---
+ \-[QUERY] Node: 'query'
+    +-[SELECT_FROM] Node: 'SELECT_FROM'
+    |  +-[FROM] Node: 'from'
+    |  |  \-[RANGE] Node: 'RANGE'
+    |  |     +-[DOT] Node: '.'
+    |  |     |  +-[DOT] Node: '.'
+    |  |     |  |  +-[DOT] Node: '.'
+    |  |     |  |  |  +-[DOT] Node: '.'
+    |  |     |  |  |  |  +-[IDENT] Node: 'com'
+    |  |     |  |  |  |  \-[IDENT] Node: 'nsg'
+    |  |     |  |  |  \-[IDENT] Node: 'persistence'
+    |  |     |  |  \-[IDENT] Node: 'domain'
+    |  |     |  \-[IDENT] Node: 'Managedelement'
+    |  |     \-[ALIAS] Node: 'generatedAlias0'
+    |  \-[SELECT] Node: 'select'
+    |     \-[IDENT] Node: 'generatedAlias0'
+    \-[WHERE] Node: 'where'
+       \-[EQ] Node: '='
+          +-[DOT] Node: '.'
+          |  +-[IDENT] Node: 'generatedAlias0'
+          |  \-[IDENT] Node: 'id'
+          \-[COLON] Node: ':'
+             \-[IDENT] Node: 'param0'
+
+16:14:48.275 [Test worker] DEBUG o.h.hql.internal.ast.ErrorCounter - throwQueryException() : no errors
+16:14:48.298 [Test worker] DEBUG o.h.h.i.antlr.HqlSqlBaseWalker - select << begin [level=1, statement=select]
+16:14:48.311 [Test worker] DEBUG o.h.h.internal.ast.tree.FromElement - FromClause{level=1} : com.nsg.persistence.domain.Managedelement (generatedAlias0) -> managedele0_
+16:14:48.312 [Test worker] DEBUG o.h.h.i.ast.tree.FromReferenceNode - Resolved : generatedAlias0 -> managedele0_.ID
+16:14:48.314 [Test worker] DEBUG o.h.h.i.ast.tree.FromReferenceNode - Resolved : generatedAlias0 -> managedele0_.ID
+16:14:48.316 [Test worker] DEBUG o.h.hql.internal.ast.tree.DotNode - getDataType() : id -> org.hibernate.type.LongType@4a4de3fe
+16:14:48.316 [Test worker] DEBUG o.h.h.i.ast.tree.FromReferenceNode - Resolved : generatedAlias0.id -> managedele0_.ID
+16:14:48.318 [Test worker] DEBUG o.h.h.i.antlr.HqlSqlBaseWalker - select : finishing up [level=1, statement=select]
+16:14:48.318 [Test worker] DEBUG o.h.hql.internal.ast.HqlSqlWalker - processQuery() :  ( SELECT ( {select clause} managedele0_.ID ) ( FromClause{level=1} bill.Managedelement managedele0_ ) ( where ( = ( managedele0_.ID managedele0_.ID id ) ? ) ) )
+16:14:48.323 [Test worker] DEBUG o.h.h.i.ast.util.JoinProcessor - Using FROM fragment [bill.Managedelement managedele0_]
+16:14:48.323 [Test worker] DEBUG o.h.h.i.antlr.HqlSqlBaseWalker - select >> end [level=1, statement=select]
+16:14:48.324 [Test worker] DEBUG o.h.h.i.ast.QueryTranslatorImpl - --- SQL AST ---
+ \-[SELECT] QueryNode: 'SELECT'  querySpaces (bill.Managedelement)
+    +-[SELECT_CLAUSE] SelectClause: '{select clause}'
+    |  +-[ALIAS_REF] IdentNode: 'managedele0_.ID as ID0_' {alias=generatedAlias0, className=com.nsg.persistence.domain.Managedelement, tableAlias=managedele0_}
+    |  \-[SQL_TOKEN] SqlFragment: 'managedele0_.createTime as createTime0_, managedele0_.name as name0_'
+    +-[FROM] FromClause: 'from' FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[generatedAlias0], fromElementByTableAlias=[managedele0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+    |  \-[FROM_FRAGMENT] FromElement: 'bill.Managedelement managedele0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=generatedAlias0,role=null,tableName=bill.Managedelement,tableAlias=managedele0_,origin=null,columns={,className=com.nsg.persistence.domain.Managedelement}}
+    \-[WHERE] SqlNode: 'where'
+       \-[EQ] BinaryLogicOperatorNode: '='
+          +-[DOT] DotNode: 'managedele0_.ID' {propertyName=id,dereferenceType=ALL,propertyPath=id,path=generatedAlias0.id,tableAlias=managedele0_,className=com.nsg.persistence.domain.Managedelement,classAlias=generatedAlias0}
+          |  +-[ALIAS_REF] IdentNode: 'managedele0_.ID' {alias=generatedAlias0, className=com.nsg.persistence.domain.Managedelement, tableAlias=managedele0_}
+          |  \-[IDENT] IdentNode: 'id' {originalText=id}
+          \-[NAMED_PARAM] ParameterNode: '?' {name=param0, expectedType=org.hibernate.type.LongType@4a4de3fe}
+
+16:14:48.324 [Test worker] DEBUG o.h.hql.internal.ast.ErrorCounter - throwQueryException() : no errors
+16:14:48.328 [Test worker] DEBUG o.h.h.i.ast.QueryTranslatorImpl - HQL: select generatedAlias0 from com.nsg.persistence.domain.Managedelement as generatedAlias0 where generatedAlias0.id=:param0
+16:14:48.329 [Test worker] DEBUG o.h.h.i.ast.QueryTranslatorImpl - SQL: select managedele0_.ID as ID0_, managedele0_.createTime as createTime0_, managedele0_.name as name0_ from bill.Managedelement managedele0_ where managedele0_.ID=?
+16:14:48.329 [Test worker] DEBUG o.h.hql.internal.ast.ErrorCounter - throwQueryException() : no errors
+16:14:48.339 [Test worker] DEBUG o.h.e.i.AbstractFlushingEventListener - Processing flush-time cascades
+16:14:48.340 [Test worker] DEBUG o.h.e.i.AbstractFlushingEventListener - Dirty checking collections
+16:14:48.342 [Test worker] DEBUG o.h.e.i.AbstractFlushingEventListener - Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
+16:14:48.342 [Test worker] DEBUG o.h.e.i.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+16:14:48.343 [Test worker] DEBUG o.h.internal.util.EntityPrinter - Listing entities:
+16:14:48.343 [Test worker] DEBUG o.h.internal.util.EntityPrinter - com.nsg.persistence.domain.Managedelement{id=523125281119508099, createTime=Wed Apr 02 16:14:48 CST 2014, name=test}
+16:14:48.343 [Test worker] DEBUG org.hibernate.engine.spi.ActionQueue - Changes must be flushed to space: bill.Managedelement
+16:14:48.349 [Test worker] DEBUG org.hibernate.SQL - insert into bill.Managedelement (createTime, name, ID) values (?, ?, ?)
+Hibernate: insert into bill.Managedelement (createTime, name, ID) values (?, ?, ?)
+16:14:48.366 [Test worker] DEBUG org.hibernate.SQL - select * from ( select managedele0_.ID as ID0_, managedele0_.createTime as createTime0_, managedele0_.name as name0_ from bill.Managedelement managedele0_ where managedele0_.ID=? ) where rownum <= ?
+Hibernate: select * from ( select managedele0_.ID as ID0_, managedele0_.createTime as createTime0_, managedele0_.name as name0_ from bill.Managedelement managedele0_ where managedele0_.ID=? ) where rownum <= ?
+16:14:48.380 [Test worker] DEBUG org.hibernate.loader.Loader - Result set row: 0
+16:14:48.383 [Test worker] DEBUG org.hibernate.loader.Loader - Result row: EntityKey[com.nsg.persistence.domain.Managedelement#523125281119508099]
+16:14:48.383 [Test worker] DEBUG o.h.e.i.StatefulPersistenceContext - Initializing non-lazy collections
+16:14:48.384 [Test worker] DEBUG o.s.t.c.t.TransactionalTestExecutionListener - No method-level @Rollback override: using default rollback [true] for test context [TestContext@1d59e6df testClass = ManagedelementRepositoryTests, testInstance = com.nsg.persistence.integretion.ManagedelementRepositoryTests@79444986, testMethod = meInRepositoryTest@ManagedelementRepositoryTests, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@7d8e9adf testClass = ManagedelementRepositoryTests, locations = '{}', classes = '{class com.nsg.config.JPAConfig}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+16:14:48.384 [Test worker] DEBUG o.s.orm.jpa.JpaTransactionManager - Initiating transaction rollback
+16:14:48.384 [Test worker] DEBUG o.s.orm.jpa.JpaTransactionManager - Rolling back JPA transaction on EntityManager [org.hibernate.ejb.EntityManagerImpl@78d9ab8]
+16:14:48.384 [Test worker] DEBUG o.h.e.t.spi.AbstractTransactionImpl - rolling back
+16:14:48.460 [Test worker] DEBUG o.h.e.t.i.jdbc.JdbcTransaction - rolled JDBC Connection
+16:14:48.460 [Test worker] DEBUG o.h.e.t.i.jdbc.JdbcTransaction - re-enabling autocommit
+16:14:48.461 [Test worker] DEBUG o.s.orm.jpa.JpaTransactionManager - Closing JPA EntityManager [org.hibernate.ejb.EntityManagerImpl@78d9ab8] after transaction
+16:14:48.461 [Test worker] DEBUG o.s.o.jpa.EntityManagerFactoryUtils - Closing JPA EntityManager
+16:14:48.462 [Test worker] DEBUG o.h.e.j.internal.JdbcCoordinatorImpl - HHH000420: Closing un-released batch
+16:14:48.462 [Test worker] DEBUG o.h.e.j.i.LogicalConnectionImpl - Releasing JDBC connection
+16:14:48.486 [Test worker] DEBUG o.h.e.j.i.LogicalConnectionImpl - Released JDBC connection
+16:14:48.486 [Test worker] DEBUG o.h.e.j.i.p.ConnectionProxyHandler - HHH000163: Logical connection releasing its physical connection
+16:14:48.486 [Test worker] INFO  o.s.t.c.t.TransactionalTestExecutionListener - Rolled back transaction after test execution for test context [TestContext@1d59e6df testClass = ManagedelementRepositoryTests, testInstance = com.nsg.persistence.integretion.ManagedelementRepositoryTests@79444986, testMethod = meInRepositoryTest@ManagedelementRepositoryTests, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@7d8e9adf testClass = ManagedelementRepositoryTests, locations = '{}', classes = '{class com.nsg.config.JPAConfig}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+16:14:48.486 [Test worker] DEBUG o.s.t.c.s.DirtiesContextTestExecutionListener - After test method: context [[TestContext@1d59e6df testClass = ManagedelementRepositoryTests, testInstance = com.nsg.persistence.integretion.ManagedelementRepositoryTests@79444986, testMethod = meInRepositoryTest@ManagedelementRepositoryTests, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@7d8e9adf testClass = ManagedelementRepositoryTests, locations = '{}', classes = '{class com.nsg.config.JPAConfig}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]], class dirties context [false], class mode [null], method dirties context [false].
+16:14:48.487 [Test worker] DEBUG o.s.t.c.w.ServletTestExecutionListener - Resetting RequestContextHolder for test context [TestContext@1d59e6df testClass = ManagedelementRepositoryTests, testInstance = com.nsg.persistence.integretion.ManagedelementRepositoryTests@79444986, testMethod = meInRepositoryTest@ManagedelementRepositoryTests, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@7d8e9adf testClass = ManagedelementRepositoryTests, locations = '{}', classes = '{class com.nsg.config.JPAConfig}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+16:14:48.487 [Test worker] DEBUG o.s.t.c.s.DirtiesContextTestExecutionListener - After test class: context [[TestContext@1d59e6df testClass = ManagedelementRepositoryTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@7d8e9adf testClass = ManagedelementRepositoryTests, locations = '{}', classes = '{class com.nsg.config.JPAConfig}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]], dirtiesContext [false].
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

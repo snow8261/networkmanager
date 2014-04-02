@@ -1,15 +1,16 @@
 package com.nsg.persistence.domain.helper;
 
-import org.hibernate.Session;
-import org.hibernate.internal.SessionImpl;
-import org.hibernate.jdbc.Work;
+import static junit.framework.TestCase.fail;
 
-import javax.persistence.EntityManager;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import static junit.framework.TestCase.fail;
+import javax.persistence.EntityManager;
+
+import org.hibernate.Session;
+import org.hibernate.internal.SessionImpl;
+import org.hibernate.jdbc.Work;
 
 public class JPAAssertions {
 
